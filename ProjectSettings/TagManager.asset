@@ -12,6 +12,7 @@ TagManager:
   - Ichor
   - Poison
   - Vermin
+  - RecipeBook
   layers:
   - Default
   - TransparentFX
