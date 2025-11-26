@@ -1,46 +1,90 @@
 using UnityEngine;
 using System.Collections;
+
 public class GhostClient : MonoBehaviour
 {
     public RecipeData requestedRecipe;
     public bool isSatisfied { get; private set; }
 
-    [Header("Apparence")]
-    public Renderer ghostRenderer; // Assigné dans l’inspector
-    public float colorChangeSpeed = 4f; // transition douce
+    [Header("Référence vers le comptoir")]
+    [SerializeField] private PotionDeliveryCounter counter;
 
-    private void OnTriggerEnter(Collider other)
+    [Header("Apparence")]
+    public Renderer ghostRenderer;
+    public float colorChangeSpeed = 4f;
+
+    private bool hasCheckedPotion = false;
+
+    private void Start()
     {
-        PotionBottle bottle = other.GetComponent<PotionBottle>();
-        if (bottle != null)
+        counter = FindFirstObjectByType<PotionDeliveryCounter>();
+    }
+
+    private void Update()
+    {
+        // Le fantôme vérifie la potion une seule fois lorsqu'il attend
+        if (!hasCheckedPotion && counter != null)
         {
-            ReceivePotion(bottle);
-            Destroy(bottle.gameObject, 1f); // la bouteille se vide / disparaît
+            PotionBottle bottle = counter.GetCurrentBottle();
+
+            if (bottle != null)
+            {
+                hasCheckedPotion = true;
+                StartCoroutine(ReceivePotion(3, bottle));
+
+                // On peut détruire la bouteille après "lecture"
+                Destroy(bottle.gameObject, 3f);
+            }
         }
     }
 
-    public void ReceivePotion(PotionBottle bottle)
+    //public void ReceivePotion(PotionBottle bottle)
+    //{
+    //    if (bottle == null || bottle.GetContainedRecipe() == null)
+    //    {
+    //        Debug.Log("Le client reçoit une fiole vide !");
+    //        return;
+    //    }
+
+    //    RecipeData received = bottle.GetContainedRecipe();
+
+    //    if (received == requestedRecipe)
+    //    {
+    //        Debug.Log($"Le client est ravi ! Potion correcte : {received.recipeName}");
+    //        isSatisfied = true;
+    //        StartCoroutine(ChangeGhostColor(received.potionColor));
+    //    }
+    //    else
+    //    {
+    //        Debug.Log($"Mauvaise potion : {received.recipeName} au lieu de {requestedRecipe.recipeName}");
+    //        isSatisfied = false;
+    //        StartCoroutine(ChangeGhostColor(Color.grey));
+    //    }
+    //}
+
+    public IEnumerator ReceivePotion(int time, PotionBottle bottle)
     {
         if (bottle == null || bottle.GetContainedRecipe() == null)
         {
             Debug.Log("Le client reçoit une fiole vide !");
-            return;
+            yield return null;
         }
 
         RecipeData received = bottle.GetContainedRecipe();
 
         if (received == requestedRecipe)
         {
+            yield return new WaitForSeconds(time);
             Debug.Log($"Le client est ravi ! Potion correcte : {received.recipeName}");
             isSatisfied = true;
             StartCoroutine(ChangeGhostColor(received.potionColor));
         }
         else
         {
+            yield return new WaitForSeconds(time);
             Debug.Log($"Mauvaise potion : {received.recipeName} au lieu de {requestedRecipe.recipeName}");
             isSatisfied = false;
-            StartCoroutine(ChangeGhostColor(Color.grey)); // couleur d’échec, par exemple
-            AudioManager.audioInstance.PlayTheGoodSound(2); // Plays "NOPE" !
+            StartCoroutine(ChangeGhostColor(Color.grey));
         }
     }
 
@@ -61,4 +105,3 @@ public class GhostClient : MonoBehaviour
         }
     }
 }
-

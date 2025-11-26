@@ -296,9 +296,10 @@ GameObject:
   - component: {fileID: 12041812}
   - component: {fileID: 12041811}
   - component: {fileID: 12041810}
+  - component: {fileID: 12041813}
   m_Layer: 0
   m_Name: Ghost Delivery Point
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,8 +338,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 4, z: 0.3}
-  m_Center: {x: 0, y: 0.7456114, z: 0}
+  m_Size: {x: 0.35037696, y: 3.1365201, z: 0.5907407}
+  m_Center: {x: -0.00758627, y: 0.31387106, z: 0.0184778}
 --- !u!23 &12041811
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -395,6 +396,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12041808}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &12041813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12041808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9384595682426d940a4d0957392d1b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionDeliveryCounter
 --- !u!1001 &15544428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2941,7 +2954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &283179135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13395,7 +13408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &773327631
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -18337,7 +18350,7 @@ Transform:
   m_GameObject: {fileID: 777658685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.38, y: 0, z: 0.44}
+  m_LocalPosition: {x: 1.57, y: 0, z: 0.44}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
