@@ -23,6 +23,9 @@ public class CoinTriggerDoor : MonoBehaviour
         if (!other.CompareTag(coinTag)) return;
 
         currentCoinsInTrigger++;
+        Destroy(other.gameObject, 0.5f);
+
+        Debug.Log("Pièces dans la tirelire : " + currentCoinsInTrigger);
 
         CheckCondition();
     }

@@ -4,6 +4,9 @@ using System.Collections;
 public class GhostClient : MonoBehaviour
 {
     public RecipeData requestedRecipe;
+
+    public PatienceBar patienceBar;
+
     public bool isSatisfied { get; private set; }
 
     [Header("Référence vers le comptoir")]
@@ -41,30 +44,6 @@ public class GhostClient : MonoBehaviour
             }
         }
     }
-
-    //public void ReceivePotion(PotionBottle bottle)
-    //{
-    //    if (bottle == null || bottle.GetContainedRecipe() == null)
-    //    {
-    //        Debug.Log("Le client reçoit une fiole vide !");
-    //        return;
-    //    }
-
-    //    RecipeData received = bottle.GetContainedRecipe();
-
-    //    if (received == requestedRecipe)
-    //    {
-    //        Debug.Log($"Le client est ravi ! Potion correcte : {received.recipeName}");
-    //        isSatisfied = true;
-    //        StartCoroutine(ChangeGhostColor(received.potionColor));
-    //    }
-    //    else
-    //    {
-    //        Debug.Log($"Mauvaise potion : {received.recipeName} au lieu de {requestedRecipe.recipeName}");
-    //        isSatisfied = false;
-    //        StartCoroutine(ChangeGhostColor(Color.grey));
-    //    }
-    //}
 
     public IEnumerator ReceivePotion(int time, PotionBottle bottle)
     {
@@ -115,3 +94,27 @@ public class GhostClient : MonoBehaviour
         }
     }
 }
+
+//public void ReceivePotion(PotionBottle bottle)
+//{
+//    if (bottle == null || bottle.GetContainedRecipe() == null)
+//    {
+//        Debug.Log("Le client reçoit une fiole vide !");
+//        return;
+//    }
+
+//    RecipeData received = bottle.GetContainedRecipe();
+
+//    if (received == requestedRecipe)
+//    {
+//        Debug.Log($"Le client est ravi ! Potion correcte : {received.recipeName}");
+//        isSatisfied = true;
+//        StartCoroutine(ChangeGhostColor(received.potionColor));
+//    }
+//    else
+//    {
+//        Debug.Log($"Mauvaise potion : {received.recipeName} au lieu de {requestedRecipe.recipeName}");
+//        isSatisfied = false;
+//        StartCoroutine(ChangeGhostColor(Color.grey));
+//    }
+//}

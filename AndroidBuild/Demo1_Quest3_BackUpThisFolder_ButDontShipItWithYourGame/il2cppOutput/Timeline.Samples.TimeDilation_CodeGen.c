@@ -1,0 +1,72 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m4225B223D7188C00C357C3A9A7D7921C0D5E8555 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m66AAFF80DCBAE13F1E4E23DCA2DA2B6B3CB5C246 (void);
+extern void TimeDilationBehaviour__ctor_m88F8D6CCD12188FE36DE6A7C0F7C5409BF4B2AB5 (void);
+extern void TimeDilationMixerBehaviour_ProcessFrame_m5A6E7AE7DC6B51D75970A01C6F7193DA14170BA7 (void);
+extern void TimeDilationMixerBehaviour_OnPlayableCreate_m87A35DA9BF2846780CFFCF23DB93E603D85C8954 (void);
+extern void TimeDilationMixerBehaviour_OnPlayableDestroy_m7A67D927C31AB1DED4CAC1F75CCAB2A5E17391F4 (void);
+extern void TimeDilationMixerBehaviour__ctor_m15433F4A51C362C23DA50FD27EDD81673518D606 (void);
+extern void TimeDilationPlayableAsset_get_clipCaps_m3F22CCECEED403CCC6F06186D5B05730F039F12E (void);
+extern void TimeDilationPlayableAsset_CreatePlayable_mD21EAABB0A614FF80F1276234CAAB869C67C756A (void);
+extern void TimeDilationPlayableAsset__ctor_mCE83D692450432DB1000B9261A0B9614B12B181D (void);
+extern void TimeDilationTrack_CreateTrackMixer_mB29BE425E7407DC154F7F4C8551A457AAD7DF239 (void);
+extern void TimeDilationTrack__ctor_mADFB86372DC9C66BE96989E64FB62B2C025C1E04 (void);
+static Il2CppMethodPointer s_methodPointers[12] = 
+{
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m4225B223D7188C00C357C3A9A7D7921C0D5E8555,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m66AAFF80DCBAE13F1E4E23DCA2DA2B6B3CB5C246,
+	TimeDilationBehaviour__ctor_m88F8D6CCD12188FE36DE6A7C0F7C5409BF4B2AB5,
+	TimeDilationMixerBehaviour_ProcessFrame_m5A6E7AE7DC6B51D75970A01C6F7193DA14170BA7,
+	TimeDilationMixerBehaviour_OnPlayableCreate_m87A35DA9BF2846780CFFCF23DB93E603D85C8954,
+	TimeDilationMixerBehaviour_OnPlayableDestroy_m7A67D927C31AB1DED4CAC1F75CCAB2A5E17391F4,
+	TimeDilationMixerBehaviour__ctor_m15433F4A51C362C23DA50FD27EDD81673518D606,
+	TimeDilationPlayableAsset_get_clipCaps_m3F22CCECEED403CCC6F06186D5B05730F039F12E,
+	TimeDilationPlayableAsset_CreatePlayable_mD21EAABB0A614FF80F1276234CAAB869C67C756A,
+	TimeDilationPlayableAsset__ctor_mCE83D692450432DB1000B9261A0B9614B12B181D,
+	TimeDilationTrack_CreateTrackMixer_mB29BE425E7407DC154F7F4C8551A457AAD7DF239,
+	TimeDilationTrack__ctor_mADFB86372DC9C66BE96989E64FB62B2C025C1E04,
+};
+static const int32_t s_InvokerIndices[12] = 
+{
+	26961,
+	15658,
+	15658,
+	2777,
+	11919,
+	11919,
+	15658,
+	15385,
+	4651,
+	15658,
+	2381,
+	15658,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Timeline_Samples_TimeDilation_CodeGenModule;
+const Il2CppCodeGenModule g_Timeline_Samples_TimeDilation_CodeGenModule = 
+{
+	"Timeline.Samples.TimeDilation.dll",
+	12,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
