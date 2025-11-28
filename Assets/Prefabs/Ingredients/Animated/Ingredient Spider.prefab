@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 960709208109006784}
   - component: {fileID: 5526676167743898741}
   m_Layer: 0
-  m_Name: Ingredient Fish
+  m_Name: Ingredient Spider
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,9 +12,6 @@ public class GhostClient : MonoBehaviour
     [Header("Référence vers le comptoir")]
     [SerializeField] private PotionDeliveryCounter deliveryCounter;
 
-    [Header("Référence au compteur de citrouilles")]
-    [SerializeField] private PumpkinCounter pumpkinCounter;
-
     [Header("Apparence")]
     public Renderer ghostRenderer;
     public float colorChangeSpeed = 4f;
@@ -24,7 +21,6 @@ public class GhostClient : MonoBehaviour
     private void Start()
     {
         deliveryCounter = FindFirstObjectByType<PotionDeliveryCounter>();
-        pumpkinCounter = FindFirstObjectByType<PumpkinCounter>();
     }
 
     private void Update()
@@ -60,11 +56,6 @@ public class GhostClient : MonoBehaviour
             yield return new WaitForSeconds(time);
             Debug.Log($"Le client est ravi ! Potion correcte : {received.recipeName}");
             isSatisfied = true;
-
-            if (pumpkinCounter != null)
-            {
-                pumpkinCounter.RegisterSatisfiedClient();
-            }
 
             StartCoroutine(ChangeGhostColor(received.potionColor));
         }

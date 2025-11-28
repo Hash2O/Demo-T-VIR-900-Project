@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0920a524e085c9f498d17e12348d0767, type: 3}
   m_Name: Ingredient Human Bone
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  ingredientName: Ingredient 5
-  description: "Le 5eme ingr\xE9dient pour une recette de toute BEAU-TE"
-  type: 0
-  icon: {fileID: 5488086946749717670, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-  prefab: {fileID: 6747318834479662115, guid: 1b71c73afa9d5a645b345a6405449b57, type: 3}
+  ingredientName: 'Os '
+  description: "Quoi de mieux que de tomber sur os pour pimenter une soir\xE9e arros\xE9e
+    ? A consommer d'un bloc ou en poudre."
+  type: 1
+  icon: {fileID: 21300000, guid: ca7097c92bf1afd44be0625c2dadee97, type: 3}
+  prefab: {fileID: 5285668376658321398, guid: cba3b0850aeb9cb4091c5736e882830f, type: 3}
   tastes: 0100000004000000
   specialEffects:
   - 

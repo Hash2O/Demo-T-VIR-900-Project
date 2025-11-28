@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Ingredient Eye
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   ingredientName: Eye
-  description: "Un oeil de cyclope conserv\xE9 en saumure."
+  description: "L'oeil de celui qui en trop vu conserve des r\xE9miniscences d'un
+    pass\xE9 tumultueux. Id\xE9al pour donner un arri\xE8re go\xFBt saumatre \xE0
+    vos recettes."
   type: 3
   icon: {fileID: -6162265055754030298, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
   prefab: {fileID: 7310008670533336731, guid: a0ef0502f18cf974d86a8b2da4a95507, type: 3}

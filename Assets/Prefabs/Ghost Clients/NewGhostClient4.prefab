@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Glouton
+  m_text: Pompette
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c331721f5d8f4557931a8cd6d2082c2, type: 2}
   m_sharedMaterial: {fileID: 21439481095386310, guid: 2c331721f5d8f4557931a8cd6d2082c2, type: 2}
@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279180490
-  m_fontColor: {r: 0.7924528, g: 0.11126597, b: 0.05980776, a: 1}
+    rgba: 4281415823
+  m_fontColor: {r: 0.5613208, g: 0.21887036, b: 0.19328497, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29edd13945e38f048a51f1a76c744f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostClient
-  requestedRecipe: {fileID: 11400000, guid: 3bf6f3a0025b6b547a5bb0e7d1a328e2, type: 2}
+  requestedRecipe: {fileID: 11400000, guid: 37e7bc3461b78db46b39db3e90861a1b, type: 2}
   patienceBar: {fileID: 610833057575448385}
   deliveryCounter: {fileID: 0}
   pumpkinCounter: {fileID: 0}

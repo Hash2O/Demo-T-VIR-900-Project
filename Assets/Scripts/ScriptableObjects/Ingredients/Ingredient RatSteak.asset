@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Ingredient RatSteak
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
   ingredientName: Steak de Rat
-  description: 
+  description: "Obtenu en \xE9crabouillant un rat d'un coup sec, il donne du corps
+    \xE0 toutes vos recettes."
   type: 2
-  icon: {fileID: 255080986811049931, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
+  icon: {fileID: 21300000, guid: 455bcf144c2cbc64aaf368fa98d024c1, type: 3}
   prefab: {fileID: 7157846214639822833, guid: 9023bab123144b74a95f04d3331c0ab2, type: 3}
   tastes: 
   specialEffects: []

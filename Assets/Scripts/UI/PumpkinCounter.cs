@@ -22,7 +22,7 @@ public class PumpkinCounter : MonoBehaviour
 
                 // Audio 
                 if(AudioManager.audioInstance != null)
-                    AudioManager.audioInstance.PlayTheGoodSound(5); // Success notification
+                    AudioManager.audioInstance.PlayTheGoodSound(5); // Success Notification
 
                 Debug.Log($"Citrouille activée ! Total : {satisfiedClients}");
 
@@ -34,21 +34,29 @@ public class PumpkinCounter : MonoBehaviour
         Debug.Log("Toutes les citrouilles sont déjà activées (clients supplémentaires ?)");
     }
 
-    public void RegisterAngryClient()
+    // Appelée lorsqu'un fantôme repart frustré
+    public void RegisterUnsatisfiedClient()
     {
-        // Trouver la première citrouille inactive
-        foreach (GameObject pumpkin in pumpkins)
+        // On ne descend pas en-dessous de zéro
+        if (satisfiedClients <= 0)
         {
-            if (pumpkin.activeSelf)
+            Debug.Log("Aucune citrouille à retirer.");
+            return;
+        }
+
+        // Trouver la dernière citrouille active
+        for (int i = pumpkins.Count - 1; i >= 0; i--)
+        {
+            if (pumpkins[i].activeSelf)
             {
-                pumpkin.SetActive(false);
+                pumpkins[i].SetActive(false);
                 satisfiedClients--;
 
-                // Audio 
+                // Audio échec
                 if (AudioManager.audioInstance != null)
-                    AudioManager.audioInstance.PlayTheGoodSound(5); // Success notification
+                    AudioManager.audioInstance.PlayTheGoodSound(6); // choisir un son d’échec
 
-                Debug.Log($"Citrouille désactivée ! Total : {satisfiedClients}");
+                Debug.Log($"Citrouille désactivée... Total : {satisfiedClients}");
                 return;
             }
         }
@@ -63,4 +71,3 @@ public class PumpkinCounter : MonoBehaviour
         }
     }
 }
-

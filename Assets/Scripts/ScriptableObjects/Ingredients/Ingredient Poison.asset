@@ -16,8 +16,8 @@ MonoBehaviour:
   description: "Peut servir de parfum pour sorci\xE8re, mais convient mieux \xE0
     l'assaisonnement de certaines potions."
   type: 0
-  icon: {fileID: 6694968190869980855, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-  prefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: 7ff723bf84c7ece4b970dc05d4af86fd, type: 3}
+  prefab: {fileID: 5069569068314383766, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
   tastes: 
   specialEffects: []
   potency: 1

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0920a524e085c9f498d17e12348d0767, type: 3}
   m_Name: Ingredient Worm
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  ingredientName: Ingredient 2
-  description: "Le deuxi\xE8me ingr\xE9dient de toute recette \xE0 succ\xE8s"
-  type: 0
-  icon: {fileID: 21300000, guid: a6586fd286ee8f94aa5957666a6e1e7c, type: 3}
+  ingredientName: "Ver de cim\xE9ti\xE8re"
+  description: "Un amateur de chair plus tr\xE8s fraiche, un r\xE9gal pour les gourmets."
+  type: 2
+  icon: {fileID: 21300000, guid: d502666ac24afb041b5231ce61d344c7, type: 3}
   prefab: {fileID: 1554534431114073434, guid: 2e1f6fe48a43f1b48bc0d04a7401ab20, type: 3}
   tastes: 0100000003000000
   specialEffects: []

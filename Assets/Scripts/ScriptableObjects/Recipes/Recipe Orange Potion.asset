@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RecipeData
   recipeName: Potion Orange
   description: 
-  icon: {fileID: -7357144505842695810, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
+  icon: {fileID: 21300000, guid: 9d7dd768df1375a468edcdcb222da1f0, type: 3}
   requiredIngredients:
   - {fileID: 11400000, guid: 3543f179473cbde45afd94072bfe4a5e, type: 2}
   - {fileID: 11400000, guid: 30f1d64c539f5c8448ee030729b4dcc9, type: 2}

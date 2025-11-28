@@ -332,7 +332,15 @@ public class GhostCycleManager : MonoBehaviour
     [Tooltip("Temps maximum qu’un fantôme attend sa potion avant de partir (en secondes).")]
     public float maxWaitTime = 60f;
 
+    [Header("Référence au compteur de citrouilles")]
+    [SerializeField] private PumpkinCounter pumpkinCounter;
+
     private bool isSpawning = false;
+
+    private void Awake()
+    {
+        pumpkinCounter = FindFirstObjectByType<PumpkinCounter>();
+    }
 
     private void Start()
     {
@@ -382,10 +390,18 @@ public class GhostCycleManager : MonoBehaviour
         if (activeGhost.isSatisfied)
         {
             yield return StartCoroutine(GiveReward());
+            if (pumpkinCounter != null)
+            {
+                pumpkinCounter.RegisterSatisfiedClient();
+            }
         }
         else
         {
             Debug.Log("⏳ Le fantôme est parti frustré (pas de potion à temps).");
+            if (pumpkinCounter != null)
+            {
+                pumpkinCounter.RegisterUnsatisfiedClient();
+            }
         }
 
         // Départ du fantôme
