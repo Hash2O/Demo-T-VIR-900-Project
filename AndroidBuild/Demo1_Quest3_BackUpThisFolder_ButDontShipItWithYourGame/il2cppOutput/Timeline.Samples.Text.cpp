@@ -1500,7 +1500,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA83
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85488
+// Method Definition Index: 85516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t90BE81115A319F7F7CBF25BFA9EBD3829C779DF4 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m44AA10D37276B21E419A7CB6B4E6F28C3F6C58EF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1534,7 +1534,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t90BE81115A319F7F7CBF25BFA9EBD
 		return L_6;
 	}
 }
-// Method Definition Index: 85489
+// Method Definition Index: 85517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mDFB6F31EF8124A972D637B6E3B68C59E8D21133A (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t44877D8D04925D34B22F68437910395720E9A8BB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1620,7 +1620,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t90BE81115A319F7F7CBF25BFA9EBD3829C779DF4_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85490
+// Method Definition Index: 85518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextPlayableAsset_get_clipCaps_m1FDCDE5A7C4A7A5FEA95CAFA737FB66A9FF639F1 (TextPlayableAsset_t9F527FDA75AFFE649D37E54EE3D432ADB323D4F5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1628,7 +1628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextPlayableAsset_get_clipCaps_m1FDCD
 		return (int32_t)(((int32_t)16));
 	}
 }
-// Method Definition Index: 85491
+// Method Definition Index: 85519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F TextPlayableAsset_CreatePlayable_mA7FA91555DDB697F95EB6E5D008D966EF6FCF82E (TextPlayableAsset_t9F527FDA75AFFE649D37E54EE3D432ADB323D4F5* __this, PlayableGraph_t4A5B0B45343A240F0761574FD7C672E0CFFF7A6E ___0_graph, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___1_owner, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1651,7 +1651,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF255
 		return L_3;
 	}
 }
-// Method Definition Index: 85492
+// Method Definition Index: 85520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextPlayableAsset__ctor_m0B11B1C7A2BE93D132488BD3A681D51DC99ACBB8 (TextPlayableAsset_t9F527FDA75AFFE649D37E54EE3D432ADB323D4F5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1678,7 +1678,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextPlayableAsset__ctor_m0B11B1C7A2BE93D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85493
+// Method Definition Index: 85521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextPlayableBehaviour__ctor_m8948F09D22074E68620442A5D083CCC862719479 (TextPlayableBehaviour_t072A772BCFEDF7D5623E9E1260DB85F5FB5F43BF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1709,7 +1709,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextPlayableBehaviour__ctor_m8948F09D220
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85494
+// Method Definition Index: 85522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F TextTrack_CreateTrackMixer_m6CAF01C6FF890D88ED8ECBB8FADDBF14DEC06F31 (TextTrack_tAD711D2554FB1FC450C0D09BB770B73F649E7513* __this, PlayableGraph_t4A5B0B45343A240F0761574FD7C672E0CFFF7A6E ___0_graph, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___1_go, int32_t ___2_inputCount, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1732,7 +1732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF255
 		return L_3;
 	}
 }
-// Method Definition Index: 85495
+// Method Definition Index: 85523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextTrack_GatherProperties_m36C2DE7FC562DECC83C35EE952228573661CEC94 (TextTrack_tAD711D2554FB1FC450C0D09BB770B73F649E7513* __this, PlayableDirector_t895D7BC3CFBFFD823278F438EAC4AA91DBFEC475* ___0_director, RuntimeObject* ___1_driver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1803,7 +1803,7 @@ IL_0017:
 		return;
 	}
 }
-// Method Definition Index: 85496
+// Method Definition Index: 85524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextTrack__ctor_mA740D3C94175546CFFDD2A0C6723F20E7841A46E (TextTrack_tAD711D2554FB1FC450C0D09BB770B73F649E7513* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1826,7 +1826,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextTrack__ctor_mA740D3C94175546CFFDD2A0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85497
+// Method Definition Index: 85525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextTrackMixerBehaviour_ProcessFrame_mA241225864E82C32B4439FA6D884BEF15B2DF75D (TextTrackMixerBehaviour_t6EE6820A33AB30E52AA27E28870D4CAAE13A7C9C* __this, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F ___0_playable, FrameData_t02E705D0271F73A24ADF9BA4B6F8760B6696F314 ___1_info, RuntimeObject* ___2_playerData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2007,7 +2007,7 @@ IL_00ab:
 		return;
 	}
 }
-// Method Definition Index: 85498
+// Method Definition Index: 85526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextTrackMixerBehaviour_OnPlayableDestroy_mA2AC8887DEE34D5C11CCB554E3AA76B57F086063 (TextTrackMixerBehaviour_t6EE6820A33AB30E52AA27E28870D4CAAE13A7C9C* __this, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F ___0_playable, const RuntimeMethod* method) 
 {
 	{
@@ -2017,7 +2017,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextTrackMixerBehaviour_OnPlayableDestro
 		return;
 	}
 }
-// Method Definition Index: 85499
+// Method Definition Index: 85527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextTrackMixerBehaviour_SetDefaults_mB57E54B94E176DB4A314C5E95B486F7E8109AD88 (TextTrackMixerBehaviour_t6EE6820A33AB30E52AA27E28870D4CAAE13A7C9C* __this, TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___0_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2089,7 +2089,7 @@ IL_005d:
 		return;
 	}
 }
-// Method Definition Index: 85500
+// Method Definition Index: 85528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextTrackMixerBehaviour_RestoreDefaults_m373958A1F01030E05B210BC57020C3944C93CB2A (TextTrackMixerBehaviour_t6EE6820A33AB30E52AA27E28870D4CAAE13A7C9C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2135,7 +2135,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 85501
+// Method Definition Index: 85529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextTrackMixerBehaviour__ctor_m2472CFF503F9A05B6DE9644845388138D177E63A (TextTrackMixerBehaviour_t6EE6820A33AB30E52AA27E28870D4CAAE13A7C9C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2353,7 +2353,7 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 62930
+// Method Definition Index: 62926
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Text_get_fontSize_m13A8365A56EA2B726EAD826B4A69C8918A528731_inline (TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* __this, const RuntimeMethod* method) 
 {
 	{

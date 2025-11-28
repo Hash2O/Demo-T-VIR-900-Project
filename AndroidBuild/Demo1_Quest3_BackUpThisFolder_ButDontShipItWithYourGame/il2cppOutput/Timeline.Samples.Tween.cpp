@@ -713,7 +713,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Quaternion__ctor_m868FD60AA6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85450
+// Method Definition Index: 85478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tC547EEB50F037352F8972DB1C62362F5B769958E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m3BD5164A6CCA374EBDD63BA10F3D84E4C59DE929 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -747,7 +747,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tC547EEB50F037352F8972DB1C6236
 		return L_6;
 	}
 }
-// Method Definition Index: 85451
+// Method Definition Index: 85479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m338859F07A74783D26F0203E083556390881DD05 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t8CCF69E842AC09FDF52D3B1CB8669539DFF983D7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -833,7 +833,7 @@ IL2CPP_EXTERN_C void MonoScriptData_tC547EEB50F037352F8972DB1C62362F5B769958E_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85452
+// Method Definition Index: 85480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenBehaviour__ctor_m80A4CE3B103EC8A69B847A65586906657FD37184 (TweenBehaviour_t62E3BB3A30D8CB1109506751090CF1939E64A98B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -849,7 +849,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenBehaviour__ctor_m80A4CE3B103EC8A69B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85453
+// Method Definition Index: 85481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TweenClip_get_clipCaps_m23E8F60BA7C57A3DD8C85251109A64649C6A26F7 (TweenClip_t4641368AF2814D8C149E086D052E2BFF9AC03ED4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -857,7 +857,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TweenClip_get_clipCaps_m23E8F60BA7C57
 		return (int32_t)(((int32_t)16));
 	}
 }
-// Method Definition Index: 85454
+// Method Definition Index: 85482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F TweenClip_CreatePlayable_mE3F6698D7084293D6B2DC9A7006D7F05C3D0EB47 (TweenClip_t4641368AF2814D8C149E086D052E2BFF9AC03ED4* __this, PlayableGraph_t4A5B0B45343A240F0761574FD7C672E0CFFF7A6E ___0_graph, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___1_owner, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -924,7 +924,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF255
 		return L_17;
 	}
 }
-// Method Definition Index: 85455
+// Method Definition Index: 85483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenClip_GatherProperties_m0F4DD69E222ABCACE18D2E6E235C4ED168F27D80 (TweenClip_t4641368AF2814D8C149E086D052E2BFF9AC03ED4* __this, PlayableDirector_t895D7BC3CFBFFD823278F438EAC4AA91DBFEC475* ___0_director, RuntimeObject* ___1_driver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -973,7 +973,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenClip_GatherProperties_m0F4DD69E222A
 		return;
 	}
 }
-// Method Definition Index: 85456
+// Method Definition Index: 85484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenClip__ctor_m196D18C6929F816EC1A4699D6162B3AFAEB8D600 (TweenClip_t4641368AF2814D8C149E086D052E2BFF9AC03ED4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -998,7 +998,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenClip__ctor_m196D18C6929F816EC1A4699
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85457
+// Method Definition Index: 85485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenMixerBehaviour_ProcessFrame_m0CCF514FE2CAF9C1FC333D6BA22C3F39B344C588 (TweenMixerBehaviour_tD89C4CFA025CA152513B417BBE4261891CB128ED* __this, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F ___0_playable, FrameData_t02E705D0271F73A24ADF9BA4B6F8760B6696F314 ___1_info, RuntimeObject* ___2_playerData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1225,7 +1225,7 @@ IL_00ce:
 		return;
 	}
 }
-// Method Definition Index: 85458
+// Method Definition Index: 85486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenMixerBehaviour_InitializeIfNecessary_m052C9272DDC81846FBAA36326C7ABA6708FFBCD2 (TweenMixerBehaviour_tD89C4CFA025CA152513B417BBE4261891CB128ED* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_transform, const RuntimeMethod* method) 
 {
 	{
@@ -1259,7 +1259,7 @@ IL_0027:
 		return;
 	}
 }
-// Method Definition Index: 85459
+// Method Definition Index: 85487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 TweenMixerBehaviour_TweenPosition_m20CFC535A92300531C2229F73699BCD6FF784E3D (TweenMixerBehaviour_tD89C4CFA025CA152513B417BBE4261891CB128ED* __this, TweenBehaviour_t62E3BB3A30D8CB1109506751090CF1939E64A98B* ___0_tweenInput, float ___1_progress, float ___2_weight, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1341,7 +1341,7 @@ IL_0042:
 		return L_19;
 	}
 }
-// Method Definition Index: 85460
+// Method Definition Index: 85488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 TweenMixerBehaviour_TweenRotation_m54641E5D1173E16FCC0E58BEC3F40BB9B655FCD2 (TweenMixerBehaviour_tD89C4CFA025CA152513B417BBE4261891CB128ED* __this, TweenBehaviour_t62E3BB3A30D8CB1109506751090CF1939E64A98B* ___0_tweenInput, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_accumRotation, float ___2_progress, float ___3_weight, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1433,7 +1433,7 @@ IL_0042:
 		return L_22;
 	}
 }
-// Method Definition Index: 85461
+// Method Definition Index: 85489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TweenBehaviour_t62E3BB3A30D8CB1109506751090CF1939E64A98B* TweenMixerBehaviour_GetTweenBehaviour_m6E2C52412E5195ACD176937314A33D7A897E174E (Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F ___0_playable, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1459,7 +1459,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TweenBehaviour_t62E3BB3A30D8CB1109506751090CF
 		return L_2;
 	}
 }
-// Method Definition Index: 85462
+// Method Definition Index: 85490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* TweenMixerBehaviour_GetCurve_m9E47A13B2E41E00497C1538E9866BDD573FFBE8F (TweenBehaviour_t62E3BB3A30D8CB1109506751090CF1939E64A98B* ___0_tween, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1503,7 +1503,7 @@ IL_0011:
 		return L_5;
 	}
 }
-// Method Definition Index: 85463
+// Method Definition Index: 85491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenMixerBehaviour__ctor_mA93DF3E0EF9D51751F9F708181A13FBC7D037EC4 (TweenMixerBehaviour_tD89C4CFA025CA152513B417BBE4261891CB128ED* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1513,7 +1513,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenMixerBehaviour__ctor_mA93DF3E0EF9D5
 		return;
 	}
 }
-// Method Definition Index: 85464
+// Method Definition Index: 85492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenMixerBehaviour__cctor_mDAA895B02DFC9747C950CDF00262ED5D6AAEF51B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1539,7 +1539,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenMixerBehaviour__cctor_mDAA895B02DFC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85465
+// Method Definition Index: 85493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F TweenTrack_CreateTrackMixer_mE37FD8376ED58CEDE03FE8CF8439D0B3979B35DC (TweenTrack_tC17054F055B4C3716D7487881BA496502EAB7311* __this, PlayableGraph_t4A5B0B45343A240F0761574FD7C672E0CFFF7A6E ___0_graph, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___1_go, int32_t ___2_inputCount, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1562,7 +1562,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF255
 		return L_3;
 	}
 }
-// Method Definition Index: 85466
+// Method Definition Index: 85494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenTrack__ctor_mBF5D840733BD3445C94E0D542BF5E7CA4CE7263C (TweenTrack_tC17054F055B4C3716D7487881BA496502EAB7311* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

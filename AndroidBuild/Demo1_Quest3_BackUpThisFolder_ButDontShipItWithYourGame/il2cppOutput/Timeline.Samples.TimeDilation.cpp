@@ -481,7 +481,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TrackAsset__ctor_mC05CAAD737449BAF26721F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85522
+// Method Definition Index: 85550
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t30B9FF992F7A324960E0E4739D4CD94546C6C30A UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m4225B223D7188C00C357C3A9A7D7921C0D5E8555 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -515,7 +515,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t30B9FF992F7A324960E0E4739D4CD
 		return L_6;
 	}
 }
-// Method Definition Index: 85523
+// Method Definition Index: 85551
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m66AAFF80DCBAE13F1E4E23DCA2DA2B6B3CB5C246 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tBFA5CCC8EB71EF6C371B8D4BD6BB0FF69842B18C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -601,7 +601,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t30B9FF992F7A324960E0E4739D4CD94546C6C30A_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85524
+// Method Definition Index: 85552
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationBehaviour__ctor_m88F8D6CCD12188FE36DE6A7C0F7C5409BF4B2AB5 (TimeDilationBehaviour_t639084AC0D7E7687F54AE80A24E31B228B708F9E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -619,7 +619,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationBehaviour__ctor_m88F8D6CCD12
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85525
+// Method Definition Index: 85553
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationMixerBehaviour_ProcessFrame_m5A6E7AE7DC6B51D75970A01C6F7193DA14170BA7 (TimeDilationMixerBehaviour_t98AB52338F8544187BD4E84F696AF8594BD996AF* __this, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F ___0_playable, FrameData_t02E705D0271F73A24ADF9BA4B6F8760B6696F314 ___1_info, RuntimeObject* ___2_playerData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -719,7 +719,7 @@ IL_004d:
 		return;
 	}
 }
-// Method Definition Index: 85526
+// Method Definition Index: 85554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationMixerBehaviour_OnPlayableCreate_m87A35DA9BF2846780CFFCF23DB93E603D85C8954 (TimeDilationMixerBehaviour_t98AB52338F8544187BD4E84F696AF8594BD996AF* __this, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F ___0_playable, const RuntimeMethod* method) 
 {
 	{
@@ -731,7 +731,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationMixerBehaviour_OnPlayableCre
 		return;
 	}
 }
-// Method Definition Index: 85527
+// Method Definition Index: 85555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationMixerBehaviour_OnPlayableDestroy_m7A67D927C31AB1DED4CAC1F75CCAB2A5E17391F4 (TimeDilationMixerBehaviour_t98AB52338F8544187BD4E84F696AF8594BD996AF* __this, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F ___0_playable, const RuntimeMethod* method) 
 {
 	{
@@ -742,7 +742,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationMixerBehaviour_OnPlayableDes
 		return;
 	}
 }
-// Method Definition Index: 85528
+// Method Definition Index: 85556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationMixerBehaviour__ctor_m15433F4A51C362C23DA50FD27EDD81673518D606 (TimeDilationMixerBehaviour_t98AB52338F8544187BD4E84F696AF8594BD996AF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -760,7 +760,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationMixerBehaviour__ctor_m15433F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85529
+// Method Definition Index: 85557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TimeDilationPlayableAsset_get_clipCaps_m3F22CCECEED403CCC6F06186D5B05730F039F12E (TimeDilationPlayableAsset_t34C65D969D1AB1D627349B9B2CB5542EFC6E6F34* __this, const RuntimeMethod* method) 
 {
 	{
@@ -768,7 +768,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TimeDilationPlayableAsset_get_clipCap
 		return (int32_t)(((int32_t)18));
 	}
 }
-// Method Definition Index: 85530
+// Method Definition Index: 85558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F TimeDilationPlayableAsset_CreatePlayable_mD21EAABB0A614FF80F1276234CAAB869C67C756A (TimeDilationPlayableAsset_t34C65D969D1AB1D627349B9B2CB5542EFC6E6F34* __this, PlayableGraph_t4A5B0B45343A240F0761574FD7C672E0CFFF7A6E ___0_graph, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___1_owner, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -791,7 +791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF255
 		return L_3;
 	}
 }
-// Method Definition Index: 85531
+// Method Definition Index: 85559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationPlayableAsset__ctor_mCE83D692450432DB1000B9261A0B9614B12B181D (TimeDilationPlayableAsset_t34C65D969D1AB1D627349B9B2CB5542EFC6E6F34* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -818,7 +818,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationPlayableAsset__ctor_mCE83D69
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 85532
+// Method Definition Index: 85560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F TimeDilationTrack_CreateTrackMixer_mB29BE425E7407DC154F7F4C8551A457AAD7DF239 (TimeDilationTrack_tD994422DE4C530D7E1AB5C8B852F7ED8FE4F9336* __this, PlayableGraph_t4A5B0B45343A240F0761574FD7C672E0CFFF7A6E ___0_graph, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___1_go, int32_t ___2_inputCount, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -841,7 +841,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Playable_t95C6B795846BA0C7D96E4DA14897CCCF255
 		return L_3;
 	}
 }
-// Method Definition Index: 85533
+// Method Definition Index: 85561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeDilationTrack__ctor_mADFB86372DC9C66BE96989E64FB62B2C025C1E04 (TimeDilationTrack_tD994422DE4C530D7E1AB5C8B852F7ED8FE4F9336* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5593254281069930453}
   - component: {fileID: 7503207194324789555}
   - component: {fileID: 3535348275543357694}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 1636134606335181144}
   - component: {fileID: 9147584985025680022}
   - component: {fileID: 4764449741991198486}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 5242429092513923416}
   - component: {fileID: 4040893984834330005}
   - component: {fileID: 2581998883458118382}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 6755276358477773101}
   - component: {fileID: 3999355496011964601}
   - component: {fileID: 8598063962868877896}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 2877996730334425187}
   - component: {fileID: 2352140546099981714}
   - component: {fileID: 8237589347095199580}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Black Ink Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 1482364282516254553}
   - component: {fileID: 6827053641600078399}
   - component: {fileID: 2727525305653727061}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Recto Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303508361229454704}
-  m_LocalRotation: {x: 0.49999994, y: 0.50000006, z: -0.5, w: -0.5}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: -0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0.003}
   m_LocalScale: {x: 0.099911556, y: 0.10000005, z: 1.1677895}
   m_ConstrainProportionsScale: 0
@@ -472,7 +472,7 @@ RectTransform:
   - {fileID: 4621866209668305520}
   - {fileID: 2471191718898065061}
   m_Father: {fileID: 7952414383984523985}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: -180, y: 90, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1, y: 0.001}
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 7223621485039231298}
   - component: {fileID: 5911004354982581296}
   - component: {fileID: 255964223783911832}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Page Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 1715646487312003251}
   - component: {fileID: 4405821872136447906}
   - component: {fileID: 4498131622186588406}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 1088949722409061937}
   - component: {fileID: 923899081677159072}
   - component: {fileID: 3534014470769673529}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Black Ink Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1027,7 +1027,7 @@ GameObject:
   - component: {fileID: 6152434502253405679}
   - component: {fileID: 961206258201398315}
   - component: {fileID: 2050474011717907907}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Black Ink Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1163,7 +1163,7 @@ GameObject:
   - component: {fileID: 6394297830889738605}
   - component: {fileID: 1897753627382784501}
   - component: {fileID: 4579792494560984871}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Major Recipes Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,7 +1299,7 @@ GameObject:
   - component: {fileID: 210734896094957484}
   - component: {fileID: 4774861604066299411}
   - component: {fileID: 5007724128642227260}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1374,7 +1374,7 @@ GameObject:
   - component: {fileID: 8095408467286190189}
   - component: {fileID: 1034986491463739011}
   - component: {fileID: 5634973678764515359}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1508,7 +1508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4507591720205215060}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Lower Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1547,7 +1547,7 @@ GameObject:
   - component: {fileID: 1056299936007736128}
   - component: {fileID: 3373841560163146908}
   - component: {fileID: 4810723606239053042}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1620,7 +1620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4921425972831210125}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Lower Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1661,7 +1661,7 @@ GameObject:
   - component: {fileID: 827378841079887269}
   - component: {fileID: 28039381185892357}
   - component: {fileID: 8890241797897349508}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1736,7 +1736,7 @@ GameObject:
   - component: {fileID: 5377693168689300276}
   - component: {fileID: 1536350473630347330}
   - component: {fileID: 7378603987182166560}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Actual Recipe Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 7112907978928975387}
   - component: {fileID: 5749474781104221898}
   - component: {fileID: 2859177308397768389}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1945,7 +1945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4770938266771399767}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredients Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1986,7 +1986,7 @@ GameObject:
   - component: {fileID: 1518063069201212778}
   - component: {fileID: 4435197260284182938}
   - component: {fileID: 4933991899589884269}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Secret Recipes Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2120,7 +2120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7927925526400013152}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredient Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2160,7 +2160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7206094277530367344}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredients Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2200,7 +2200,7 @@ GameObject:
   - component: {fileID: 6649394122032913375}
   - component: {fileID: 6246320348701442682}
   - component: {fileID: 2783510837032380979}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blue Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2336,7 +2336,7 @@ GameObject:
   - component: {fileID: 3514245794196691003}
   - component: {fileID: 4506241560218056505}
   - component: {fileID: 8422957399384835399}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2450,7 +2450,7 @@ GameObject:
   - component: {fileID: 9210308625211067571}
   - component: {fileID: 3491538496534269788}
   - component: {fileID: 1050210312827929666}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Black Ink Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2586,7 +2586,7 @@ GameObject:
   - component: {fileID: 439369722469691198}
   - component: {fileID: 4389699155583209777}
   - component: {fileID: 1631635918814893580}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Pink Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2659,7 +2659,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9182295390836142419}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Upper Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2700,7 +2700,7 @@ GameObject:
   - component: {fileID: 4966167326557068916}
   - component: {fileID: 4368185050084208469}
   - component: {fileID: 5869120236583210982}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Page Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2911,7 +2911,7 @@ GameObject:
   - component: {fileID: 3329677981325839956}
   - component: {fileID: 3942937316108950408}
   - component: {fileID: 3989616451472437463}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Page Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2984,7 +2984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6597575948735371906}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredient Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3026,7 +3026,7 @@ GameObject:
   - component: {fileID: 3641978289164839231}
   - component: {fileID: 7028282778233644925}
   - component: {fileID: 7803714459628032851}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3101,7 +3101,7 @@ GameObject:
   - component: {fileID: 3701875698398705091}
   - component: {fileID: 6044327634579119771}
   - component: {fileID: 6024035607505994090}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3176,7 +3176,7 @@ GameObject:
   - component: {fileID: 463067921539205060}
   - component: {fileID: 2824444015419433238}
   - component: {fileID: 8980552659401730663}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3326,7 +3326,7 @@ GameObject:
   - component: {fileID: 1215601447005960523}
   - component: {fileID: 2459606628143440875}
   - component: {fileID: 4065687761907296477}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Minor Recipes Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3462,7 +3462,7 @@ GameObject:
   - component: {fileID: 4266401349907498453}
   - component: {fileID: 1595589768086989691}
   - component: {fileID: 2836650905325331115}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Major Recipes Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3734,7 +3734,7 @@ GameObject:
   - component: {fileID: 3228967606108589042}
   - component: {fileID: 3627523046102640957}
   - component: {fileID: 7036134535367970761}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3914,7 +3914,7 @@ GameObject:
   - component: {fileID: 225294945086923332}
   - component: {fileID: 8710904756213060727}
   - component: {fileID: 3617347775545288802}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Black Ink Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4050,7 +4050,7 @@ GameObject:
   - component: {fileID: 897820288062966896}
   - component: {fileID: 1049385811720592598}
   - component: {fileID: 6535508702692167651}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Pink Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4186,7 +4186,7 @@ GameObject:
   - component: {fileID: 2269370631605610410}
   - component: {fileID: 3457773621487521411}
   - component: {fileID: 760022228406673916}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4259,7 +4259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4776507288906404682}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Upper Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4375,7 +4375,7 @@ GameObject:
   - component: {fileID: 5108995219211324763}
   - component: {fileID: 7428157797892875909}
   - component: {fileID: 5621903188940126180}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4450,7 +4450,7 @@ GameObject:
   - component: {fileID: 5672079379932691306}
   - component: {fileID: 84027939835978885}
   - component: {fileID: 2725608938014494424}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4525,7 +4525,7 @@ GameObject:
   - component: {fileID: 5855486126313623706}
   - component: {fileID: 3232544830483097001}
   - component: {fileID: 4796859823729108048}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4600,7 +4600,7 @@ GameObject:
   - component: {fileID: 7634982267981037623}
   - component: {fileID: 7152694427270643411}
   - component: {fileID: 1325326076677111880}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Actual Recipe Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4675,7 +4675,7 @@ GameObject:
   - component: {fileID: 4962017380385511748}
   - component: {fileID: 3274726136764106401}
   - component: {fileID: 1727790668244633783}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Green Potion Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4821,7 +4821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1264205582757256345
 Transform:
   m_ObjectHideFlags: 0
@@ -4830,7 +4830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3439346406334611277}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 1.65, y: 0.12, z: -0}
   m_LocalScale: {x: 0.0034163, y: 3.2028868, z: 5.347998}
   m_ConstrainProportionsScale: 0
@@ -4838,7 +4838,7 @@ Transform:
   - {fileID: 5529719135039288211}
   - {fileID: 4366147087928684520}
   m_Father: {fileID: 6062946696066892940}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &8978426198510297735
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5119,7 +5119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5289184937123662236}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Upper Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5158,7 +5158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8754619694823085060}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredients Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5199,7 +5199,7 @@ GameObject:
   - component: {fileID: 4185935294220679424}
   - component: {fileID: 2051042133325314688}
   - component: {fileID: 1247266008495625667}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5272,7 +5272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6653047105793479439}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredients Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5313,7 +5313,7 @@ GameObject:
   - component: {fileID: 1995094788096441271}
   - component: {fileID: 4101460327040049908}
   - component: {fileID: 5061712269356281358}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5449,7 +5449,7 @@ GameObject:
   - component: {fileID: 1614152448028952165}
   - component: {fileID: 5194659650428731957}
   - component: {fileID: 6548467369295222199}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Black Ink Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5585,7 +5585,7 @@ GameObject:
   - component: {fileID: 3224372143469123298}
   - component: {fileID: 2288984944141241487}
   - component: {fileID: 937679850535750367}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5658,7 +5658,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8614605838337331826}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Lower Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5699,7 +5699,7 @@ GameObject:
   - component: {fileID: 1702756935639266217}
   - component: {fileID: 8026128659746012216}
   - component: {fileID: 8737232618571810684}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Green Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5835,7 +5835,7 @@ GameObject:
   - component: {fileID: 6120833319207700529}
   - component: {fileID: 4670564827313622203}
   - component: {fileID: 2329610695877682478}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5985,7 +5985,7 @@ GameObject:
   - component: {fileID: 1227459987052575529}
   - component: {fileID: 9041256057374568371}
   - component: {fileID: 1185973977219306328}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6060,7 +6060,7 @@ GameObject:
   - component: {fileID: 2809065277270177465}
   - component: {fileID: 2089422845306566682}
   - component: {fileID: 646794078299199249}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6135,7 +6135,7 @@ GameObject:
   - component: {fileID: 2624318182370618834}
   - component: {fileID: 7487927767811492577}
   - component: {fileID: 3404522546257056063}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6210,7 +6210,7 @@ GameObject:
   - component: {fileID: 3258303497907522220}
   - component: {fileID: 5901128288672573193}
   - component: {fileID: 3457700970576536143}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6283,7 +6283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3661594716416953233}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Lower Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6324,7 +6324,7 @@ GameObject:
   - component: {fileID: 4229947219817787103}
   - component: {fileID: 6692346673048218956}
   - component: {fileID: 6056750659561615338}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6399,7 +6399,7 @@ GameObject:
   - component: {fileID: 8649689517150887736}
   - component: {fileID: 5900022934784271128}
   - component: {fileID: 5489893481805695145}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6474,7 +6474,7 @@ GameObject:
   - component: {fileID: 847011550007239811}
   - component: {fileID: 8897770665331499353}
   - component: {fileID: 1566960418851436986}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6549,7 +6549,7 @@ GameObject:
   - component: {fileID: 2972584392550714099}
   - component: {fileID: 3185390843382230756}
   - component: {fileID: 8509127920876023393}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6865,7 +6865,7 @@ GameObject:
   - component: {fileID: 8026864923154240457}
   - component: {fileID: 3371099660676238444}
   - component: {fileID: 1699999478142811428}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6940,7 +6940,7 @@ GameObject:
   - component: {fileID: 7829127631669214219}
   - component: {fileID: 8463866149420345147}
   - component: {fileID: 533910305283049114}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7013,7 +7013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3314319936923954916}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Upper Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7190,7 +7190,7 @@ GameObject:
   - component: {fileID: 8665211464241239785}
   - component: {fileID: 5716307498526602812}
   - component: {fileID: 4916379484040720871}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7265,7 +7265,7 @@ GameObject:
   - component: {fileID: 8970025902608611412}
   - component: {fileID: 4842283104223885790}
   - component: {fileID: 5369214747079660033}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7340,7 +7340,7 @@ GameObject:
   - component: {fileID: 8275619858858472186}
   - component: {fileID: 5097459853037150141}
   - component: {fileID: 2357122911174156930}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7490,7 +7490,7 @@ GameObject:
   - component: {fileID: 3599777720926215639}
   - component: {fileID: 2148671184565938375}
   - component: {fileID: 8187390207440133442}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7626,7 +7626,7 @@ GameObject:
   - component: {fileID: 8516705178298054837}
   - component: {fileID: 2395525695126177079}
   - component: {fileID: 129724829336390231}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7905,7 +7905,7 @@ GameObject:
   - component: {fileID: 8976282648800502370}
   - component: {fileID: 5703825801996498099}
   - component: {fileID: 2956203716570807918}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blue Potion Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7980,7 +7980,7 @@ GameObject:
   - component: {fileID: 454072616506735034}
   - component: {fileID: 3954104488028361123}
   - component: {fileID: 7679395609303717151}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8114,7 +8114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6446238072761095371}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredient Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8154,7 +8154,7 @@ GameObject:
   - component: {fileID: 8569565391050834315}
   - component: {fileID: 1101746900438090516}
   - component: {fileID: 7368168110555178433}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8229,7 +8229,7 @@ GameObject:
   - component: {fileID: 7302304094481902630}
   - component: {fileID: 5036040624348103153}
   - component: {fileID: 6541425593755209929}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8304,7 +8304,7 @@ GameObject:
   - component: {fileID: 3825299718872456377}
   - component: {fileID: 5232813344617489010}
   - component: {fileID: 2433447601266751910}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8377,7 +8377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8383145127644636280}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Upper Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8437,7 +8437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5789364165964408837}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 1.6, y: 0.18, z: -0}
   m_LocalScale: {x: 0.0034163, y: 3.2028868, z: 5.347998}
   m_ConstrainProportionsScale: 0
@@ -8445,7 +8445,7 @@ Transform:
   - {fileID: 3808546846347775209}
   - {fileID: 2883057728332840307}
   m_Father: {fileID: 6062946696066892940}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &2989118654550282686
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8728,7 +8728,7 @@ GameObject:
   - component: {fileID: 176611693804613281}
   - component: {fileID: 7669013598213968552}
   - component: {fileID: 6547866519201631860}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8862,7 +8862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4388923004472780545}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Lower Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8901,7 +8901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4848115274487078572}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredient Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8944,7 +8944,7 @@ GameObject:
   - component: {fileID: 7574332312737877794}
   - component: {fileID: 9102736071646963741}
   - component: {fileID: 1171262344373652944}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Recto Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8958,7 +8958,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6085607784023519005}
-  m_LocalRotation: {x: 0.49999994, y: 0.50000006, z: -0.5, w: -0.5}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: -0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.099911556, y: 0.10000005, z: 1.1677895}
   m_ConstrainProportionsScale: 0
@@ -8968,7 +8968,7 @@ RectTransform:
   - {fileID: 5289184937123662236}
   - {fileID: 4388923004472780545}
   m_Father: {fileID: 2703477331844086013}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: -180, y: 90, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1, y: 0.001}
@@ -9048,7 +9048,7 @@ GameObject:
   - component: {fileID: 5318242574538167653}
   - component: {fileID: 9185041685355879415}
   - component: {fileID: 3366218511473099432}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9123,7 +9123,7 @@ GameObject:
   - component: {fileID: 5884163571433485985}
   - component: {fileID: 4431612802794044601}
   - component: {fileID: 6403246458278899774}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9198,7 +9198,7 @@ GameObject:
   - component: {fileID: 7239679228930377053}
   - component: {fileID: 2381468392300619260}
   - component: {fileID: 4517656296669989713}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Pink Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9334,7 +9334,7 @@ GameObject:
   - component: {fileID: 7130193388772473264}
   - component: {fileID: 3036445916556048256}
   - component: {fileID: 5928954228628853044}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Page Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9409,7 +9409,7 @@ GameObject:
   - component: {fileID: 4901694869163298086}
   - component: {fileID: 3482890624807538279}
   - component: {fileID: 382194415688094265}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9484,7 +9484,7 @@ GameObject:
   - component: {fileID: 1559014036069856762}
   - component: {fileID: 2595670083301046096}
   - component: {fileID: 3872735360168865378}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9634,7 +9634,7 @@ GameObject:
   - component: {fileID: 6297010449918391680}
   - component: {fileID: 5507357893885344867}
   - component: {fileID: 1123722744403019111}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9709,7 +9709,7 @@ GameObject:
   - component: {fileID: 2291710120595097940}
   - component: {fileID: 4219492379503641636}
   - component: {fileID: 7864887974927299240}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9784,7 +9784,7 @@ GameObject:
   - component: {fileID: 2814834256953689781}
   - component: {fileID: 645117549198244710}
   - component: {fileID: 1371204865227290036}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Major Recipes Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9920,7 +9920,7 @@ GameObject:
   - component: {fileID: 457280268138332018}
   - component: {fileID: 5790473548428657694}
   - component: {fileID: 1573854431493622819}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Magic Recipes Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10056,7 +10056,7 @@ GameObject:
   - component: {fileID: 6572803085256837084}
   - component: {fileID: 3402415109591863338}
   - component: {fileID: 1170826379189244959}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10129,7 +10129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4122005146400406600}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Upper Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10171,7 +10171,7 @@ GameObject:
   - component: {fileID: 1080913545999168467}
   - component: {fileID: 4932714252290325632}
   - component: {fileID: 6638889560349285405}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Verso Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10185,7 +10185,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6641251316799442577}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: -0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0.003}
   m_LocalScale: {x: 0.099911556, y: 0.10000005, z: 1.1677895}
   m_ConstrainProportionsScale: 0
@@ -10195,7 +10195,7 @@ RectTransform:
   - {fileID: 4776507288906404682}
   - {fileID: 4921425972831210125}
   m_Father: {fileID: 7952414383984523985}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -270}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -1, y: -0.001}
@@ -10275,7 +10275,7 @@ GameObject:
   - component: {fileID: 1929112705303709475}
   - component: {fileID: 5198997749159355967}
   - component: {fileID: 8966474944851425989}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10350,7 +10350,7 @@ GameObject:
   - component: {fileID: 3859066703354527694}
   - component: {fileID: 9079025833671384735}
   - component: {fileID: 6817586298039529231}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Green Potion Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10425,7 +10425,7 @@ GameObject:
   - component: {fileID: 1024549602516767835}
   - component: {fileID: 4069952784623317636}
   - component: {fileID: 5611608279291617108}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10500,7 +10500,7 @@ GameObject:
   - component: {fileID: 5027114995402082293}
   - component: {fileID: 8010679127439038479}
   - component: {fileID: 182788487786536482}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10575,7 +10575,7 @@ GameObject:
   - component: {fileID: 2965281320565358275}
   - component: {fileID: 4821423056618488624}
   - component: {fileID: 466984983561610868}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blue Potion Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10711,7 +10711,7 @@ GameObject:
   - component: {fileID: 4899667944183405508}
   - component: {fileID: 6372740971235810024}
   - component: {fileID: 1667112744793000622}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10847,7 +10847,7 @@ GameObject:
   - component: {fileID: 2219625257977428832}
   - component: {fileID: 8836006249347014666}
   - component: {fileID: 3368785103714523959}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Black Ink Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10983,7 +10983,7 @@ GameObject:
   - component: {fileID: 6779485229756487610}
   - component: {fileID: 461947948072126861}
   - component: {fileID: 7487067668872505953}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Page Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11058,7 +11058,7 @@ GameObject:
   - component: {fileID: 4123710960781113208}
   - component: {fileID: 2786970334548907619}
   - component: {fileID: 4462338913543163051}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11133,7 +11133,7 @@ GameObject:
   - component: {fileID: 5630916109858822679}
   - component: {fileID: 8273314427322677882}
   - component: {fileID: 2715439305729880937}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11227,7 +11227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7204463463648716404}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 1.6, y: 0.15, z: 0}
   m_LocalScale: {x: 0.0034163, y: 3.2028868, z: 5.347998}
   m_ConstrainProportionsScale: 0
@@ -11235,7 +11235,7 @@ Transform:
   - {fileID: 156336144427769523}
   - {fileID: 5207670160903816866}
   m_Father: {fileID: 6062946696066892940}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &1798011739248048906
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11518,7 +11518,7 @@ GameObject:
   - component: {fileID: 4828166078123941153}
   - component: {fileID: 704252435595065671}
   - component: {fileID: 1452964365535818453}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11591,7 +11591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4621866209668305520}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Upper Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11632,7 +11632,7 @@ GameObject:
   - component: {fileID: 6954182686856618479}
   - component: {fileID: 2237123201635801074}
   - component: {fileID: 718404353604574717}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11705,7 +11705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8342380578826314921}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredients Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11744,7 +11744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9024607458406777952}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredient Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11786,7 +11786,7 @@ GameObject:
   - component: {fileID: 3383537491884831681}
   - component: {fileID: 4814317198940705701}
   - component: {fileID: 2737859583818446668}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12080,7 +12080,7 @@ GameObject:
   - component: {fileID: 151600184804943345}
   - component: {fileID: 3249861908790254743}
   - component: {fileID: 6121708284867746562}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12155,7 +12155,7 @@ GameObject:
   - component: {fileID: 3932091254238127505}
   - component: {fileID: 3262235531015863713}
   - component: {fileID: 6174770043712271273}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12230,7 +12230,7 @@ GameObject:
   - component: {fileID: 7594614885730104592}
   - component: {fileID: 3092538828410804536}
   - component: {fileID: 3733673716701880745}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Page Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12305,7 +12305,7 @@ GameObject:
   - component: {fileID: 7920876149703975526}
   - component: {fileID: 3399310930431533891}
   - component: {fileID: 6938920241600469583}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12380,7 +12380,7 @@ GameObject:
   - component: {fileID: 6711746490791675336}
   - component: {fileID: 6350346780363204281}
   - component: {fileID: 3929484082603554152}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12455,7 +12455,7 @@ GameObject:
   - component: {fileID: 6870551175552644697}
   - component: {fileID: 5595363236623338466}
   - component: {fileID: 5455969906517139304}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Green Potion Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12605,7 +12605,7 @@ GameObject:
   - component: {fileID: 3352333012810576084}
   - component: {fileID: 2585726515529374805}
   - component: {fileID: 7918249316299746740}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Minor Recipes Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12741,7 +12741,7 @@ GameObject:
   - component: {fileID: 8571881028587028657}
   - component: {fileID: 785312441041405786}
   - component: {fileID: 4637804905552382159}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12814,7 +12814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 969610774360572446}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Lower Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13066,7 +13066,7 @@ GameObject:
   - component: {fileID: 8431567310944515995}
   - component: {fileID: 3940784774077879112}
   - component: {fileID: 1279022776031212988}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13141,7 +13141,7 @@ GameObject:
   - component: {fileID: 1581841632285414724}
   - component: {fileID: 3821557371886655902}
   - component: {fileID: 2578424539315730365}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13216,7 +13216,7 @@ GameObject:
   - component: {fileID: 581133099880985766}
   - component: {fileID: 2081240581666826105}
   - component: {fileID: 3942736673754246633}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13291,7 +13291,7 @@ GameObject:
   - component: {fileID: 5849752195830583678}
   - component: {fileID: 6372167658847292735}
   - component: {fileID: 6389173813737299249}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13502,7 +13502,7 @@ GameObject:
   - component: {fileID: 3607819025416105694}
   - component: {fileID: 1725100813833749491}
   - component: {fileID: 7206303901206645047}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Back Ink Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13577,7 +13577,7 @@ GameObject:
   - component: {fileID: 8546163236482828778}
   - component: {fileID: 1969494284588505498}
   - component: {fileID: 5954363843370284409}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13650,7 +13650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5301092238721618532}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredient Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13690,7 +13690,7 @@ GameObject:
   - component: {fileID: 8474317398812391737}
   - component: {fileID: 2547558552637568632}
   - component: {fileID: 3303260119046843169}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Page Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13763,7 +13763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2471191718898065061}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Lower Recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13805,7 +13805,7 @@ GameObject:
   - component: {fileID: 927753423676246166}
   - component: {fileID: 5200338796923195735}
   - component: {fileID: 4823413296975421606}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: 'Verso Canvas '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13819,7 +13819,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8509521625642808990}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: -0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.099911556, y: 0.100000046, z: 1.1677895}
   m_ConstrainProportionsScale: 0
@@ -13829,7 +13829,7 @@ RectTransform:
   - {fileID: 9182295390836142419}
   - {fileID: 969610774360572446}
   m_Father: {fileID: 1264205582757256345}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -270}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -1, y: -0.001}
@@ -13910,7 +13910,7 @@ GameObject:
   - component: {fileID: 2017331243793249858}
   - component: {fileID: 5986458576986782651}
   - component: {fileID: 5512205611713008615}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Front Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14014,7 +14014,7 @@ GameObject:
   - component: {fileID: 3334381231467899436}
   - component: {fileID: 490242675502896690}
   - component: {fileID: 3575382402197003663}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Black Ink Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14301,7 +14301,7 @@ GameObject:
   - component: {fileID: 4366946157387369244}
   - component: {fileID: 2127614172585376183}
   - component: {fileID: 2911746967847741514}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Verso Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14315,7 +14315,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8699290052233372919}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: -0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.099911556, y: 0.10000005, z: 1.1677895}
   m_ConstrainProportionsScale: 0
@@ -14325,7 +14325,7 @@ RectTransform:
   - {fileID: 4122005146400406600}
   - {fileID: 8614605838337331826}
   m_Father: {fileID: 2703477331844086013}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -270}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -1, y: 0.001}
@@ -14443,7 +14443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7335138752197782982}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredient Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14485,7 +14485,7 @@ GameObject:
   - component: {fileID: 4585703332805391116}
   - component: {fileID: 2663331219719151406}
   - component: {fileID: 294950310247380195}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Black Ink Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14626,7 +14626,7 @@ GameObject:
   - component: {fileID: 213465994339006397}
   - component: {fileID: 8952181825353958159}
   - component: {fileID: 3582708888093819157}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Recto Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14640,7 +14640,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8971792096376333853}
-  m_LocalRotation: {x: 0.49999994, y: 0.50000006, z: -0.5, w: -0.5}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: -0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.099911556, y: 0.100000046, z: 1.1677895}
   m_ConstrainProportionsScale: 0
@@ -14650,7 +14650,7 @@ RectTransform:
   - {fileID: 8383145127644636280}
   - {fileID: 3661594716416953233}
   m_Father: {fileID: 1264205582757256345}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: -180, y: 90, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1, y: 0.001}
@@ -14730,7 +14730,7 @@ GameObject:
   - component: {fileID: 1332338256724108553}
   - component: {fileID: 2758290578478131669}
   - component: {fileID: 4372461070903930076}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Black Ink Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14864,7 +14864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 221123752645850906}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ingredients Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14979,7 +14979,7 @@ GameObject:
   - component: {fileID: 5304844538230835375}
   - component: {fileID: 4400227411350234929}
   - component: {fileID: 6130644458761828442}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Potion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15115,7 +15115,7 @@ GameObject:
   - component: {fileID: 6938508665175896912}
   - component: {fileID: 8231543741222991009}
   - component: {fileID: 4366188239090051107}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Blood Red Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

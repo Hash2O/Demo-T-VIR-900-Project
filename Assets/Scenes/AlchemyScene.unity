@@ -2537,7 +2537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &283179135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14592,7 +14592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7277802327414017196, guid: e4f332aea9a46b34bab01d9d6d17f588, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 7434851320941268098, guid: e4f332aea9a46b34bab01d9d6d17f588, type: 3}
       propertyPath: m_AnchorMax.y
@@ -14780,7 +14780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8404871649812681847, guid: e4f332aea9a46b34bab01d9d6d17f588, type: 3}
       propertyPath: m_CameraYOffset
-      value: 1.36144
+      value: 1.46144
       objectReference: {fileID: 0}
     - target: {fileID: 8404871649812681847, guid: e4f332aea9a46b34bab01d9d6d17f588, type: 3}
       propertyPath: m_RequestedTrackingOriginMode
@@ -26244,6 +26244,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1006882123}
     m_Modifications:
+    - target: {fileID: 3439346406334611277, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789364165964408837, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6062946696066892940, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.075
@@ -26258,7 +26266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6062946696066892940, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9404
+      value: -0.939
       objectReference: {fileID: 0}
     - target: {fileID: 6062946696066892940, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26266,7 +26274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6062946696066892940, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5238
+      value: 1.483
       objectReference: {fileID: 0}
     - target: {fileID: 6062946696066892940, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26299,6 +26307,10 @@ PrefabInstance:
     - target: {fileID: 6874807817774194230, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
       propertyPath: m_Name
       value: Magical_Recipe_Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204463463648716404, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8026387448153371987, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -26576,7 +26588,7 @@ MonoBehaviour:
   spawnDelay: 2
   exitDelay: 5
   timeBeforeVanish: 5
-  maxWaitTime: 60
+  maxWaitTime: 90
   pumpkinCounter: {fileID: 0}
 --- !u!1 &2137235237
 GameObject:
