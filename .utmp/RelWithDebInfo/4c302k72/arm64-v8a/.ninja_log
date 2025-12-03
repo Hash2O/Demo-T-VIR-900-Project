@@ -1,0 +1,10 @@
+# ninja log v5
+49	2291	7862202954032325	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	77730d8e01775a27
+67	2321	7862202954149998	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	8e81becc90292cc6
+18	2354	7862202954597529	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	8769126d2fed8120
+1	2488	7862202956022909	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3f5e3c8bb31b6ab1
+135	2508	7862202956218303	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	ef162c1f069e0df6
+109	2691	7862202958086648	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b087287d8ddc66b4
+88	2984	7862202960938988	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	669615e269796397
+33	3068	7862202961755931	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	9c167e886e68e86f
+3069	3293	7862202964042274	C:/Users/samue/Documents/Projets Unity/Epitech/T-VIR ProBuilder Demo Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4c302k72/obj/arm64-v8a/libgame.so	4f3d6ff46f860f51

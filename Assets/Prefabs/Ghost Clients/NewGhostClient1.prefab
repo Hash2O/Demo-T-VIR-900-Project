@@ -264,9 +264,9 @@ MonoBehaviour:
   requestedRecipe: {fileID: 11400000, guid: 34f9f23a99e9ae54b9d3c18bd7bcaec7, type: 2}
   patienceBar: {fileID: 8126073865829670007}
   deliveryCounter: {fileID: 0}
-  pumpkinCounter: {fileID: 0}
-  ghostRenderer: {fileID: 0}
+  ghostRenderer: {fileID: 5762825470672592396}
   colorChangeSpeed: 4
+  hasReceivedCorrectPotion: 0
 --- !u!54 &408281016872707170
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -617,6 +617,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7302401909513016724}
   m_SourcePrefab: {fileID: 100100000, guid: 83e5f8400e8fee64bb65c037e5cae915, type: 3}
+--- !u!23 &5762825470672592396 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9094085073560132202, guid: 83e5f8400e8fee64bb65c037e5cae915, type: 3}
+  m_PrefabInstance: {fileID: 3588530020818650214}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6123021150918082521 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7292544136418458559, guid: 83e5f8400e8fee64bb65c037e5cae915, type: 3}

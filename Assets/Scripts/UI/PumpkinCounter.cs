@@ -54,7 +54,7 @@ public class PumpkinCounter : MonoBehaviour
 
                 // Audio échec
                 if (AudioManager.audioInstance != null)
-                    AudioManager.audioInstance.PlayTheGoodSound(6); // choisir un son d’échec
+                    AudioManager.audioInstance.PlayTheGoodSound(8); // Horror lose
 
                 Debug.Log($"Citrouille désactivée... Total : {satisfiedClients}");
                 return;

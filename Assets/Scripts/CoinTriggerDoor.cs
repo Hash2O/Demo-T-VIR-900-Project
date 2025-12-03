@@ -1,5 +1,7 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class CoinTriggerDoor : MonoBehaviour
 {
@@ -12,11 +14,25 @@ public class CoinTriggerDoor : MonoBehaviour
     public string openTriggerName = "Open"; // Nom du trigger dans l'Animator
     public AudioSource doorAudioSource;
 
-    [Header("Event personnalisé")]
-    public UnityEvent onConditionMet;   // Event à appeler quand la condition est remplie
+    [Header("Référence compteur tirelire")]
+    public TextMeshProUGUI compteurTirelire;
 
+    [Header("Clé dans la serrure")]
+    public XRSocketInteractor keySocket;    // La socket où la clé doit être placée
+    public string requiredKeyTag = "Key";   // Tag de l’objet-clé
+
+    public bool keyInserted = false;
     private int currentCoinsInTrigger = 0;
     private bool doorOpened = false;
+
+    private void Start()
+    {
+        if (keySocket != null)
+        {
+            keySocket.selectEntered.AddListener(OnKeyInserted);
+            keySocket.selectExited.AddListener(OnKeyRemoved);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +42,7 @@ public class CoinTriggerDoor : MonoBehaviour
         Destroy(other.gameObject, 0.5f);
 
         Debug.Log("Pièces dans la tirelire : " + currentCoinsInTrigger);
+        compteurTirelire.text = currentCoinsInTrigger.ToString();
 
         CheckCondition();
     }
@@ -36,29 +53,47 @@ public class CoinTriggerDoor : MonoBehaviour
 
         currentCoinsInTrigger--;
         if (currentCoinsInTrigger < 0) currentCoinsInTrigger = 0;
+        compteurTirelire.text = currentCoinsInTrigger.ToString();
+    }
+
+    private void OnKeyInserted(SelectEnterEventArgs args)
+    {
+        if (args.interactableObject.transform.CompareTag(requiredKeyTag))
+        {
+            keyInserted = true;
+            Debug.Log("Clé insérée dans la serrure !");
+            CheckCondition();
+        }
+    }
+
+    private void OnKeyRemoved(SelectExitEventArgs args)
+    {
+        if (args.interactableObject.transform.CompareTag(requiredKeyTag))
+        {
+            keyInserted = false;
+            Debug.Log("Clé retirée de la serrure.");
+        }
     }
 
     private void CheckCondition()
     {
         if (doorOpened) return;
 
-        if (currentCoinsInTrigger >= requiredCoins)
+        if (currentCoinsInTrigger >= requiredCoins && keyInserted)
         {
             doorOpened = true;
 
-            // 1) Event générique (pratique dans l’inspector)
-            onConditionMet?.Invoke();
+            Debug.Log("Conditions remplies : ouverture de la porte !");
 
-            // 2) Optionnel : ouverture de porte via Animator
             if (doorAnimator != null && !string.IsNullOrEmpty(openTriggerName))
             {
                 doorAnimator.SetTrigger(openTriggerName);
-                if (AudioManager.audioInstance != null) AudioManager.audioInstance.PlayTheGoodSound(6); // Scary wooden door opening
-            }
 
-            // Si tu veux que le trigger ne serve qu'une fois :
-            // GetComponent<Collider>().enabled = false;
+                if (AudioManager.audioInstance != null)
+                    AudioManager.audioInstance.PlayTheGoodSound(6);
+            }
         }
     }
+
 }
 

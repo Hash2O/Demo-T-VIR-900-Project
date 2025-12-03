@@ -119,7 +119,7 @@ public class AdvancedSliceObject : MonoBehaviour
     private void SetupSlicedComponents(GameObject slicedPart, IngredientBehaviour parentIngredient)
     {
         slicedPart.tag = "Ingredient";
-        slicedPart.layer = 7;
+        slicedPart.layer = 6;
 
         Rigidbody rb = slicedPart.AddComponent<Rigidbody>();
         MeshCollider collider = slicedPart.AddComponent<MeshCollider>();
@@ -137,7 +137,7 @@ public class AdvancedSliceObject : MonoBehaviour
         }
 
         // Optionnel : légère poussée pour séparer visuellement les morceaux
-        rb.AddExplosionForce(sliceForce, slicedPart.transform.position, 1f);
+        //rb.AddExplosionForce(sliceForce, slicedPart.transform.position, 1f);
     }
 
     private void ResetCutting()

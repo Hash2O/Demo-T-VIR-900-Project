@@ -15,6 +15,7 @@ TagManager:
   - RecipeBook
   - Delivery
   - Coin
+  - Key
   layers:
   - Default
   - TransparentFX

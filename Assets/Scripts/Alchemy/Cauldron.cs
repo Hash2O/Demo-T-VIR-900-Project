@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using System.Drawing;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class Cauldron : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class Cauldron : MonoBehaviour
             stirringManager.enabled = false;
 
         if (liquidRenderer != null)
-            initialLiquidColor = liquidRenderer.material.color;
+            initialLiquidColor = liquidRenderer.material.GetColor("_PotionColor");
 
         UpdateRecipeUI(null);
     }
