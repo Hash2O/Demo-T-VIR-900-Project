@@ -28,6 +28,8 @@ public class Cauldron : MonoBehaviour
     public AudioSource successSound; // Audio pour notification d'un succès
     public ParticleSystem successParticles; // UI : ParticleSystem pour notifier le joueur
     public float colorChangeSpeed = 2f; // Vitesse de transition entre couleur de base et nouvelle couleur issue de la recette
+    public ParticleSystem bubbles; //Les bulles de la potion
+    public ParticleSystem.ColorOverLifetimeModule colorModule; //Module pour accéder à la couleur du particles system
 
     [Header("Effets visuels")]
     public GameObject resetEffectPrefab;   // BlueSwirl Effect
@@ -247,6 +249,10 @@ public class Cauldron : MonoBehaviour
         {
             t += Time.deltaTime * colorChangeSpeed;
             mat.color = Color.Lerp(startColor, targetColor, t);
+            Gradient gradientParticles = new Gradient();
+            gradientParticles.SetKeys(
+                new GradientColorKey[] { new GradientColorKey(targetColor, 0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.15f), new GradientAlphaKey(0.0f, 1.0f) });
+            colorModule.color = gradientParticles;
             yield return null;
         }
     }
