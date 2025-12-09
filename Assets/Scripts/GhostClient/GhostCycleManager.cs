@@ -18,7 +18,9 @@ public class GhostCycleManager : MonoBehaviour
     public GameObject coinPrefab;
     public GameObject keyPrefab;
     public Transform coinDeliveryPoint;
+    public Transform keyDeliveryPoint;
     public float timeBetweenCoins = 0.5f;
+    public float bonusTimeToCheck = 30f;
 
     [Header("Timers")]
     public float spawnDelay = 2f;
@@ -31,11 +33,12 @@ public class GhostCycleManager : MonoBehaviour
     [Header("Référence au compteur de citrouilles")]
     [SerializeField] private PumpkinCounter pumpkinCounter;
 
-    private bool isSpawning = false;
-
     [Header("Gestion Présence/Absence XR Rig dans la cuisine")]
     public bool isPlayerInside = false; // gère l'absence ou la présence du XR Rig dans la "cuisine"
     public bool isPaused = false;   // gel du timer patience si le joueur sort
+
+    private bool isSpawning = false;
+    private float lastRemainingTime = 0f;   // Stockage du temps restant quand le fantôme est satisfait (gestion récompense bonus)
 
     private void Awake()
     {
@@ -150,6 +153,9 @@ public class GhostCycleManager : MonoBehaviour
             // Si la potion est donnée : on stoppe tout immédiatement
             if (isSatisfiedCheck())
             {
+                // Capturer le temps restant pour déterminer si récompense bonus (voir GiveReward())
+                lastRemainingTime = maxWaitTime - timer;
+
                 if (activeGhost.patienceBar != null)
                     activeGhost.patienceBar.SetVisible(false);
                 yield break;
@@ -187,9 +193,15 @@ public class GhostCycleManager : MonoBehaviour
         if (coinPrefab == null || coinDeliveryPoint == null)
             yield break;
 
-        int coinCount = Random.Range(1, 4);
+        int coinCount = Random.Range(1, 4); // 1 à 3 pièces de base
+        int bonusCoins = Mathf.FloorToInt(lastRemainingTime / bonusTimeToCheck);    // Bonus si livraison rapide
 
         if(AudioManager.audioInstance != null)
+            AudioManager.audioInstance.PlayTheGoodSound(11);    // Fairy Cartoon Success Voice
+
+        coinCount += bonusCoins;    // calcul du nombre de pièces données par le client fantôme satisfait
+
+        if (AudioManager.audioInstance != null)
             AudioManager.audioInstance.PlayTheGoodSound(0); // Cashing Sound
 
         for (int i = 0; i < coinCount; i++)
@@ -201,7 +213,7 @@ public class GhostCycleManager : MonoBehaviour
         int randomKey = Random.Range(1, 11);
 
         if (randomKey < 4)
-            Instantiate(keyPrefab, coinDeliveryPoint.position, Quaternion.identity);
+            Instantiate(keyPrefab, keyDeliveryPoint.position, Quaternion.identity);
 
         Debug.Log($"{coinCount} pièce(s) récompensent la sorcière !");
     }

@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.11
@@ -1419,6 +1419,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ef1f5011c9e288045ac1b86456e5d045, type: 3}
   - {fileID: 8300000, guid: 4443249534b41cb4ab3e1e80f14e584b, type: 3}
   - {fileID: 8300000, guid: c646b5bd367e96049840a1740a3f9d44, type: 3}
+  - {fileID: 8300000, guid: 772270cdd8038ab46ad56163b7b47139, type: 3}
 --- !u!1 &78265699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3975,6 +3976,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202549825}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &203758939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203758940}
+  m_Layer: 0
+  m_Name: Key Delivery Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &203758940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203758939}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.103, y: 1.203, z: -2.178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2136085429}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &205889328
 GameObject:
   m_ObjectHideFlags: 0
@@ -35638,6 +35670,10 @@ PrefabInstance:
         la table et attendrissez le avec le maillet. A servir entier ou d\xE9coup\xE9,
         selon vos envies !"
       objectReference: {fileID: 0}
+    - target: {fileID: 2703477331844086013, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.55
+      objectReference: {fileID: 0}
     - target: {fileID: 3439346406334611277, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -35745,6 +35781,10 @@ PrefabInstance:
     - target: {fileID: 7634982267981037623, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952414383984523985, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 8026387448153371987, guid: 235b1404a62700c49a8b856a88b67235, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -36038,6 +36078,7 @@ Transform:
   - {fileID: 12041809}
   - {fileID: 777658689}
   - {fileID: 654226763}
+  - {fileID: 203758940}
   m_Father: {fileID: 185736518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2136085430
@@ -36064,7 +36105,9 @@ MonoBehaviour:
   coinPrefab: {fileID: 5806976029930133173, guid: 4e8ae86a3d47d164ab134ebff68107c1, type: 3}
   keyPrefab: {fileID: 3141147471865295643, guid: 2b2d4a83c39e1bd4aaecab8d2dd00f84, type: 3}
   coinDeliveryPoint: {fileID: 654226763}
+  keyDeliveryPoint: {fileID: 203758940}
   timeBetweenCoins: 0.5
+  bonusTimeToCheck: 30
   spawnDelay: 5
   exitDelay: 5
   timeBeforeVanish: 5
