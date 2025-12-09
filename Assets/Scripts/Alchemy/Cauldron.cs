@@ -45,6 +45,7 @@ public class Cauldron : MonoBehaviour
 
     private void Start()
     {
+        // Affichage des slots "ingrédients" sur la cheminée, au démarrage (vide)
         foreach (var slot in ingredientSlots)
             if (slot != null)
                 slot.sprite = null;
@@ -52,6 +53,7 @@ public class Cauldron : MonoBehaviour
         if (stirringManager != null)
             stirringManager.enabled = false;
 
+        // Récupération de la couleur du contenu du chaudron
         if (liquidRenderer != null)
             initialLiquidColor = liquidRenderer.material.GetColor("_PotionColor");
 
