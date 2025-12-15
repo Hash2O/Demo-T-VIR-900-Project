@@ -69,6 +69,18 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"XRI Right Interaction "
+	"XRI Right In"
+	"XRI Right Interaction"
+	"XRI Right "
+	"X"
+	"Right Interaction Ac"
+	"Right Interact"
+	"Right"
+	"right interaction"
+	"right interac"
+	"right interact"
+	"right "
 	"xri left interaction/"
 	"xri left interaction selec"
 	"xri left interact"
@@ -77,18 +89,14 @@ recentSearches = [
 	"xri right locomotion"
 	"xri right "
 	"xri right l"
-	"xri right Locomotio"
-	"xri righ"
-	"xri right"
-	"xri left loco"
-	"xri right/"
-	"xri left/tr"
 ]
 searchItemFavorites = [
 ]
 savedSearchesSortOrder = 0
 showSavedSearchPanel = false
 hideTabs = false
+indexOnEditorStartup = true
+logIndexingPerformanceReport = false
 expandedQueries = [
 ]
 queryBuilder = true
