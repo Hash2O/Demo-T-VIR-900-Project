@@ -17,12 +17,15 @@ public class GhostClient : MonoBehaviour
     public float colorChangeSpeed = 4f;
 
     //private bool hasCheckedPotion = false;
+    private bool isEvaluatingPotion = false;
 
     public bool hasReceivedCorrectPotion = false;
+    public GhostCycleManager manager;
 
     private void Start()
     {
         deliveryCounter = FindFirstObjectByType<PotionDeliveryCounter>();
+        manager = FindFirstObjectByType<GhostCycleManager>();
     }
 
     private void Update()
@@ -40,33 +43,83 @@ public class GhostClient : MonoBehaviour
         }
     }
 
+    //public IEnumerator ReceivePotion(int time, PotionBottle bottle)
+    //{
+    //    if (bottle == null || bottle.GetContainedRecipe() == null)
+    //    {
+    //        Debug.Log("Le client reçoit une fiole vide !");
+    //        yield return null;
+    //    }
+
+    //    RecipeData received = bottle.GetContainedRecipe();
+
+    //    if (received == requestedRecipe)
+    //    {
+    //        yield return new WaitForSeconds(time);
+    //        hasReceivedCorrectPotion = true;
+    //        Debug.Log($"Le client est ravi ! Potion correcte : {received.recipeName}");
+    //        isSatisfied = true;
+
+    //        StartCoroutine(ChangeGhostColor(received.potionColor));
+    //    }
+    //    else
+    //    {
+    //        yield return new WaitForSeconds(time);
+    //        Debug.Log($"Mauvaise potion : {received.recipeName} au lieu de {requestedRecipe.recipeName}");
+    //        isSatisfied = false;
+
+    //        // Application pénalité de temps en cas de mauvaise potion reçue
+    //        if (manager != null)
+    //        {
+    //            manager.ApplyWrongPotionPenalty();
+    //        }
+
+    //        StartCoroutine(ChangeGhostColor(Color.black));
+    //        if (AudioManager.audioInstance != null) AudioManager.audioInstance.PlayTheGoodSound(9);  // Fantasy Monster Grunt
+    //    }
+    //}
+
     public IEnumerator ReceivePotion(int time, PotionBottle bottle)
     {
+        if (isEvaluatingPotion)
+            yield break;
+
+        isEvaluatingPotion = true;
+
         if (bottle == null || bottle.GetContainedRecipe() == null)
         {
-            Debug.Log("Le client reçoit une fiole vide !");
-            yield return null;
+            isEvaluatingPotion = false;
+            yield break;
         }
 
         RecipeData received = bottle.GetContainedRecipe();
 
+        yield return new WaitForSeconds(time);
+
         if (received == requestedRecipe)
         {
-            yield return new WaitForSeconds(time);
             hasReceivedCorrectPotion = true;
-            Debug.Log($"Le client est ravi ! Potion correcte : {received.recipeName}");
             isSatisfied = true;
 
+            Debug.Log($"✅ Potion correcte : {received.recipeName}");
             StartCoroutine(ChangeGhostColor(received.potionColor));
         }
         else
         {
-            yield return new WaitForSeconds(time);
-            Debug.Log($"Mauvaise potion : {received.recipeName} au lieu de {requestedRecipe.recipeName}");
+            Debug.Log($"❌ Mauvaise potion : {received.recipeName}");
             isSatisfied = false;
+
+            if (manager != null)
+                manager.ApplyWrongPotionPenalty();
+
             StartCoroutine(ChangeGhostColor(Color.black));
-            if (AudioManager.audioInstance != null) AudioManager.audioInstance.PlayTheGoodSound(9);  // Fantasy Monster Grunt
+
+            if (AudioManager.audioInstance != null)
+                AudioManager.audioInstance.PlayTheGoodSound(9);
         }
+
+        // 🔓 Autorise une nouvelle potion APRÈS traitement
+        isEvaluatingPotion = false;
     }
 
     private IEnumerator ChangeGhostColor(Color targetColor)

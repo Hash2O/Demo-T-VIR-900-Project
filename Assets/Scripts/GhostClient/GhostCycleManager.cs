@@ -28,21 +28,29 @@ public class GhostCycleManager : MonoBehaviour
     public float timeBeforeVanish = 5f;
 
     [Tooltip("Temps maximum qu’un fantôme attend sa potion avant de partir (en secondes).")]
-    public float maxWaitTime = 60f;
+    public float maxWaitTime = 180f;
 
     [Header("Référence au compteur de citrouilles")]
     [SerializeField] private PumpkinCounter pumpkinCounter;
+
+    [Header("Référence à la tirelire")]
+    [SerializeField] private CoinTriggerDoor coinTrigger;
 
     [Header("Gestion Présence/Absence XR Rig dans la cuisine")]
     public bool isPlayerInside = false; // gère l'absence ou la présence du XR Rig dans la "cuisine"
     public bool isPaused = false;   // gel du timer patience si le joueur sort
 
-    private bool isSpawning = false;
-    private float lastRemainingTime = 0f;   // Stockage du temps restant quand le fantôme est satisfait (gestion récompense bonus)
+    [Header("Patience penalties")]
+    [Tooltip("Temps retiré à la patience du fantôme en cas de mauvaise potion")]
+    public float wrongPotionPenalty = 30f;
+
+    private bool isSpawning = false; 
+    private float remainingWaitTime;    // Stockage du temps restant quand le fantôme est satisfait (gestion récompense bonus)
 
     private void Awake()
     {
         pumpkinCounter = FindFirstObjectByType<PumpkinCounter>();
+        coinTrigger = FindFirstObjectByType<CoinTriggerDoor>();
     }
 
     private void Start()
@@ -135,58 +143,57 @@ public class GhostCycleManager : MonoBehaviour
 
         while (Vector3.Distance(agent.transform.position, target) > agent.stoppingDistance + 0.2f)
         {
-            Debug.Log("Distance : " + Vector3.Distance(agent.transform.position, target));
+            //Debug.Log("Distance : " + Vector3.Distance(agent.transform.position, target));
             yield return null;
         }
     }
 
     private IEnumerator GhostWaitTimer(System.Func<bool> isSatisfiedCheck)
     {
-        float timer = 0f;
+        remainingWaitTime = maxWaitTime;
 
-        // Active la barre au début
-        if (activeGhost.patienceBar != null)
-            activeGhost.patienceBar.SetVisible(true);
-
-        while (timer < maxWaitTime)
+        while (remainingWaitTime > 0f)
         {
-            // Si la potion est donnée : on stoppe tout immédiatement
             if (isSatisfiedCheck())
             {
-                // Capturer le temps restant pour déterminer si récompense bonus (voir GiveReward())
-                lastRemainingTime = maxWaitTime - timer;
-
                 if (activeGhost.patienceBar != null)
                     activeGhost.patienceBar.SetVisible(false);
                 yield break;
             }
 
-            // PAUSE : tant que le joueur est hors de la zone
             while (isPaused)
-            {
-                // On gèle tout : pas d’incrément du timer, pas de changement de fill
                 yield return null;
-            }
 
-            // Mise à jour de la barre (pendant que le timer avance)
+            remainingWaitTime -= Time.deltaTime;
+
             if (activeGhost.patienceBar != null)
             {
-                float remainingPercent = 1f - (timer / maxWaitTime);
+                float remainingPercent = remainingWaitTime / maxWaitTime;
                 activeGhost.patienceBar.SetFill(remainingPercent);
             }
 
-            // Le timer n’avance que lorsque la zone est active
-            timer += Time.deltaTime;
             yield return null;
         }
 
-        // Timer écoulé : cacher la barre
         if (activeGhost.patienceBar != null)
             activeGhost.patienceBar.SetVisible(false);
 
-        Debug.Log("Temps écoulé ! Le fantôme part sans potion.");
+        // Temps écoulé
+        Debug.Log("⏰ Temps écoulé ! Le fantôme part sans potion, vidant en partie la tirelire en partant.");
+
+        if (activeGhost.patienceBar != null) activeGhost.patienceBar.SetVisible(false); // Désactivation de la barre de patience
+        if (coinTrigger != null) coinTrigger.CoinRemoving();    // Si pièce dans la tirelire, le fantôme en enlève une 
+        if (AudioManager.audioInstance != null) AudioManager.audioInstance.PlayNotificationSound(1);    // Fail Notification Horror
+        
     }
 
+    public void ApplyWrongPotionPenalty()
+    {
+        remainingWaitTime -= wrongPotionPenalty;
+        remainingWaitTime = Mathf.Max(remainingWaitTime, 0f);
+
+        Debug.Log($"❌ Mauvaise potion ! -{wrongPotionPenalty} secondes de patience.");
+    }
 
     private IEnumerator GiveReward()
     {
@@ -194,7 +201,7 @@ public class GhostCycleManager : MonoBehaviour
             yield break;
 
         int coinCount = Random.Range(1, 4); // 1 à 3 pièces de base
-        int bonusCoins = Mathf.FloorToInt(lastRemainingTime / bonusTimeToCheck);    // Bonus si livraison rapide
+        int bonusCoins = Mathf.FloorToInt(remainingWaitTime / bonusTimeToCheck);    // Bonus si livraison rapide
 
         if(AudioManager.audioInstance != null)
             AudioManager.audioInstance.PlayTheGoodSound(11);    // Fairy Cartoon Success Voice
@@ -219,6 +226,53 @@ public class GhostCycleManager : MonoBehaviour
         Debug.Log($"{coinCount} pièce(s) récompensent la sorcière !");
     }
 }
+
+//private IEnumerator GhostWaitTimer(System.Func<bool> isSatisfiedCheck)
+//{
+//    float timer = 0f;
+
+//    // Active la barre au début
+//    if (activeGhost.patienceBar != null)
+//        activeGhost.patienceBar.SetVisible(true);
+
+//    while (timer < maxWaitTime)
+//    {
+//        // Si la potion est donnée : on stoppe tout immédiatement
+//        if (isSatisfiedCheck())
+//        {
+//            // Capturer le temps restant pour déterminer si récompense bonus (voir GiveReward())
+//            lastRemainingTime = maxWaitTime - timer;
+
+//            if (activeGhost.patienceBar != null)
+//                activeGhost.patienceBar.SetVisible(false);
+//            yield break;
+//        }
+
+//        // PAUSE : tant que le joueur est hors de la zone
+//        while (isPaused)
+//        {
+//            // On gèle tout : pas d’incrément du timer, pas de changement de fill
+//            yield return null;
+//        }
+
+//        // Mise à jour de la barre (pendant que le timer avance)
+//        if (activeGhost.patienceBar != null)
+//        {
+//            float remainingPercent = 1f - (timer / maxWaitTime);
+//            activeGhost.patienceBar.SetFill(remainingPercent);
+//        }
+
+//        // Le timer n’avance que lorsque la zone est active
+//        timer += Time.deltaTime;
+//        yield return null;
+//    }
+
+//    // Timer écoulé : cacher la barre
+//    if (activeGhost.patienceBar != null)
+//        activeGhost.patienceBar.SetVisible(false);
+
+//    Debug.Log("Temps écoulé ! Le fantôme part sans potion.");
+//}
 
 /// <summary>
 /// Timer d’attente du fantôme : si le timer expire avant qu’il soit satisfait → il part.

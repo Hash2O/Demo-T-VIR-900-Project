@@ -4157,7 +4157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &283179135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22599,8 +22599,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 03dba5e94afe6a74cb60a20c161ea912, type: 3}
   - {fileID: 8300000, guid: b28cf593056b53747941a6a2f2e63c90, type: 3}
   timeMin: 1
-  timeMax: 2
-  audioSource: {fileID: 1552209852}
+  timeMax: 3
 --- !u!82 &1552209852
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32544,8 +32543,10 @@ MonoBehaviour:
   timeBeforeVanish: 5
   maxWaitTime: 180
   pumpkinCounter: {fileID: 1458711575}
+  coinTrigger: {fileID: 0}
   isPlayerInside: 0
   isPaused: 0
+  wrongPotionPenalty: 30
 --- !u!1 &2137235237
 GameObject:
   m_ObjectHideFlags: 0

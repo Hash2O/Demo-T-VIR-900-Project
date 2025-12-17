@@ -51,6 +51,11 @@ public class CoinTriggerDoor : MonoBehaviour
     {
         if (!other.CompareTag(coinTag)) return;
 
+        CoinRemoving();
+    }
+
+    public void CoinRemoving()
+    {
         currentCoinsInTrigger--;
         if (currentCoinsInTrigger < 0) currentCoinsInTrigger = 0;
         compteurTirelire.text = currentCoinsInTrigger.ToString();
