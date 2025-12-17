@@ -97,7 +97,7 @@ public class Cauldron : MonoBehaviour
             if (ingredient != null && ingredient.data != null)
             {
                 AddIngredient(ingredient.data);
-                AudioManager.audioInstance.PlayTheGoodSound(3);
+                AudioManager.audioInstance.PlayTheGoodSound(3); // Liquid Splash
                 Destroy(other.gameObject);
             }
         }
@@ -222,8 +222,10 @@ public class Cauldron : MonoBehaviour
             if (successParticles != null)
                 successParticles.Play();
 
-            if (successSound != null)
-                successSound.Play();
+            //if (successSound != null)
+            //    successSound.Play();
+
+            if (AudioManager.audioInstance != null) AudioManager.audioInstance.PlayNotificationSound(3);    // Success Notification
 
             // NB : si l'option création directe de l'objet, décommenter cette partie (utile pour les tests rapides)
             // Création du résultat

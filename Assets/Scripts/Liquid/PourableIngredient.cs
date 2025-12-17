@@ -59,8 +59,10 @@ public class PourableIngredient : MonoBehaviour
         // Ajout unique de l’ingrédient au chaudron
         currentCauldron.AddIngredient(ingredientData);
 
-        if (pourSuccessSound != null)
-            pourSuccessSound.Play();
+        //if (pourSuccessSound != null)
+        //    pourSuccessSound.Play();
+
+        if (AudioManager.audioInstance != null) AudioManager.audioInstance.PlayNotificationSound(3);    // Success Notification
 
         // Lancer le cooldown avant qu’un nouveau versement soit possible
         StartCoroutine(PourCooldown());

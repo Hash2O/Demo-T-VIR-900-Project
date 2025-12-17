@@ -211,6 +211,7 @@ public class GhostCycleManager : MonoBehaviour
         }
 
         int randomKey = Random.Range(1, 11);
+        Debug.Log("Random Key Number : " + randomKey);
 
         if (randomKey < 4)
             Instantiate(keyPrefab, keyDeliveryPoint.position, Quaternion.identity);
