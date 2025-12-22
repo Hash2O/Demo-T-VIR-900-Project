@@ -21,8 +21,10 @@ public class CoinTriggerDoor : MonoBehaviour
     public XRSocketInteractor keySocket;    // La socket où la clé doit être placée
     public string requiredKeyTag = "Key";   // Tag de l’objet-clé
 
+    [HideInInspector]
     public bool keyInserted = false;
-    private int currentCoinsInTrigger = 0;
+    [HideInInspector]
+    public int currentCoinsInTrigger = 0;
     private bool doorOpened = false;
 
     private void Start()

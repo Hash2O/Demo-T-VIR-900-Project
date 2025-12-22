@@ -56,6 +56,7 @@
 
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -70,6 +71,12 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Durée du fade après le chargement d'une nouvelle scène")]
     public float fadeInDuration = 3.0f;
+
+    [Header("References")]
+    public Button loadGameButton;
+    //public Button clearSavedDataButton;
+
+    public bool loadSavedData;
 
     private void Awake()
     {
@@ -97,6 +104,11 @@ public class GameManager : MonoBehaviour
         fadeCanvas = FindFirstObjectByType<FadeCanvas>();
         if (fadeCanvas != null)
             fadeCanvas.StartFadeOut(); // Assure que l'écran commence visible puis s'efface
+
+        // Init buttons if save file exist
+        bool saveFileExist = System.IO.File.Exists(Application.persistentDataPath + "/SavedData.json");
+        loadGameButton.interactable = saveFileExist;
+        //clearSavedDataButton.interactable = saveFileExist;
     }
 
     /// <summary>
