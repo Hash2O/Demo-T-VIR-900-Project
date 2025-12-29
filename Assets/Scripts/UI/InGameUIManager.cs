@@ -14,7 +14,9 @@ public class InGameUIManager : MonoBehaviour
 
     private bool isInGameMenuActive;
     private bool isInGameUIActive;
-    private bool isNarrativeStoryActive;
+
+    [HideInInspector]
+    public bool isNarrativeStoryActive;
 
 
     private void Start()

@@ -1,6 +1,8 @@
 using NUnit.Framework.Interfaces;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class SaveSystemManager : MonoBehaviour
 {
@@ -8,14 +10,31 @@ public class SaveSystemManager : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private CoinTriggerDoor coin;
     [SerializeField] private PumpkinCounter pumpkinCounter;
+    [SerializeField] private InGameUIManager gameUIManager;
+
+    // Needs to be associated in Hierarchy
+    [Header("Game Mechanics")]
+    [SerializeField] private GhostCycleManager ghostCycleManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Assign all possible references at start
+        if (playerTransform == null) playerTransform = FindFirstObjectByType<XROrigin>().transform;
+        if (coin == null) coin = FindFirstObjectByType<CoinTriggerDoor>();
+        if (pumpkinCounter == null) pumpkinCounter = FindFirstObjectByType<PumpkinCounter>();
+        if (gameUIManager == null) gameUIManager = FindFirstObjectByType<InGameUIManager>();
+
         // A décommenter si on veut lancer le jeu en récupérant les données sauvegardées directement
-        //if (GameManager.Instance.loadSavedData)
+        //if (GameManager.Instance.loadSavedData == false)
+        //{
+        //    Debug.Log("No saved data found.");
+        //    return;
+        //}
+        //else
         //{
         //    LoadData();
+        //    gameUIManager.ToggleNarrativeStory();
         //    Debug.Log("Datas have been loaded.");
         //}
     }
@@ -63,15 +82,37 @@ public class SaveSystemManager : MonoBehaviour
         playerTransform.position = savedData.playerPosition;
         // Coins
         coin.currentCoinsInTrigger = savedData.coinInPocket;
+        // Update coin counter text
+        coin.compteurTirelire.text = savedData.coinInPocket.ToString();
         // Satisfied Clients
         pumpkinCounter.satisfiedClients = savedData.satisfiedClients;
         // Affichage citrouille par client satisfait
         for (int i = 0; i < savedData.satisfiedClients; i++) 
         {
-            pumpkinCounter.RegisterSatisfiedClient();
+            pumpkinCounter.ActivatePumpkins();
         }
 
+        // Stop Audio Tutorial
+        if(gameUIManager.isNarrativeStoryActive == true) gameUIManager.ToggleNarrativeStory();
+
+        // Active GhostCycle if disabled (starting game)
+        ActivateGhostCycleManager();
+
         Debug.Log("Datas have been loaded.");
+    }
+
+    private void ActivateGhostCycleManager()
+    {
+        if (ghostCycleManager.isActiveAndEnabled)
+        {
+            Debug.Log("Ghost Cycle Manager already active.");
+            return;
+        }
+        else
+        {
+            Debug.Log("Ghost Cycle Manager found disabled and then enabled.");
+            ghostCycleManager.gameObject.SetActive(true);
+        }
     }
 }
 

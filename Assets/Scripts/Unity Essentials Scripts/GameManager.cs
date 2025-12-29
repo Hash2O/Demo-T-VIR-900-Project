@@ -75,7 +75,8 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     public Button loadGameButton;
     //public Button clearSavedDataButton;
-
+    
+    // 
     public bool loadSavedData;
 
     private void Awake()

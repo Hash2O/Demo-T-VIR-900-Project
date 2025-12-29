@@ -34,6 +34,29 @@ public class PumpkinCounter : MonoBehaviour
         Debug.Log("Toutes les citrouilles sont déjà activées (clients supplémentaires ?)");
     }
 
+    public void ActivatePumpkins()
+    {
+        // Trouver la première citrouille inactive
+        foreach (GameObject pumpkin in pumpkins)
+        {
+            if (!pumpkin.activeSelf)
+            {
+                pumpkin.SetActive(true);
+
+                // Audio 
+                if (AudioManager.audioInstance != null)
+                    AudioManager.audioInstance.PlayTheGoodSound(5); // Success Notification
+
+                Debug.Log($"Citrouille activée ! Total : {satisfiedClients}");
+
+                //CheckForVictory();
+                return;
+            }
+        }
+
+        Debug.Log("Toutes les citrouilles sont déjà activées (clients supplémentaires ?)");
+    }
+
     // Appelée lorsqu'un fantôme repart frustré
     public void RegisterUnsatisfiedClient()
     {

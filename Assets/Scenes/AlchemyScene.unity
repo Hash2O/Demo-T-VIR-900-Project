@@ -19722,6 +19722,7 @@ MonoBehaviour:
   inGameUICanvasButtonText: {fileID: 1004295561}
   director: {fileID: 2030832090}
   directorButtonText: {fileID: 1498555338}
+  isNarrativeStoryActive: 0
 --- !u!4 &1085180860
 Transform:
   m_ObjectHideFlags: 0
@@ -27710,6 +27711,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7883776424851392575, guid: 256b903016c0c96479318f7235a07bce, type: 3}
   m_PrefabInstance: {fileID: 1625051626}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1625051629 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3252841772724144442, guid: 256b903016c0c96479318f7235a07bce, type: 3}
+  m_PrefabInstance: {fileID: 1625051626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1628796029
 GameObject:
   m_ObjectHideFlags: 0
@@ -29773,6 +29779,10 @@ PrefabInstance:
       value: CauldronCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 7743606221330564571, guid: ed3dadba57330ab4eab87eb5ed1e903e, type: 3}
+      propertyPath: bubbles
+      value: 
+      objectReference: {fileID: 1625051629}
+    - target: {fileID: 7743606221330564571, guid: ed3dadba57330ab4eab87eb5ed1e903e, type: 3}
       propertyPath: newRecipeText
       value: 
       objectReference: {fileID: 1536325911}
@@ -30650,7 +30660,7 @@ MonoBehaviour:
   fadeOutDuration: 3
   fadeInDuration: 3
   loadGameButton: {fileID: 1174865333}
-  loadSavedData: 1
+  loadSavedData: 0
 --- !u!114 &1723565088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30663,9 +30673,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bae90bbfab57204b8da8f4cfd897d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveSystemManager
-  playerTransform: {fileID: 1301784738}
-  coin: {fileID: 327828000}
-  pumpkinCounter: {fileID: 1458711575}
+  playerTransform: {fileID: 0}
+  coin: {fileID: 0}
+  pumpkinCounter: {fileID: 0}
+  gameUIManager: {fileID: 0}
+  ghostCycleManager: {fileID: 2136085430}
 --- !u!1001 &1724443834
 PrefabInstance:
   m_ObjectHideFlags: 0

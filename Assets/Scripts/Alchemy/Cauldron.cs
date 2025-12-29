@@ -29,7 +29,7 @@ public class Cauldron : MonoBehaviour
     public ParticleSystem successParticles; // UI : ParticleSystem pour notifier le joueur
     public float colorChangeSpeed = 2f; // Vitesse de transition entre couleur de base et nouvelle couleur issue de la recette
     public ParticleSystem bubbles; //Les bulles de la potion
-    public ParticleSystem.ColorOverLifetimeModule colorModule; //Module pour accéder à la couleur du particles system
+    //public ParticleSystem.ColorOverLifetimeModule colorModule; //Module pour accéder à la couleur du particles system
 
     [Header("Effets visuels")]
     public GameObject resetEffectPrefab;   // BlueSwirl Effect
@@ -241,22 +241,68 @@ public class Cauldron : MonoBehaviour
         StartCoroutine(AutoResetAfterDelay(resetTime)); // reset après le temps défini dans l'inspector
     }
 
+    //private IEnumerator ChangeLiquidColor(Color targetColor)
+    //{
+    //    if (liquidRenderer == null) yield break;
+
+    //    Material mat = liquidRenderer.material;
+    //    Color startColor = mat.color;
+    //    float t = 0f;
+
+    //    while (t < 1f)
+    //    {
+    //        t += Time.deltaTime * colorChangeSpeed;
+    //        mat.color = Color.Lerp(startColor, targetColor, t);
+    //        Gradient gradientParticles = new Gradient();
+    //        gradientParticles.SetKeys(
+    //            new GradientColorKey[] { new GradientColorKey(targetColor, 0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.15f), new GradientAlphaKey(0.0f, 1.0f) });
+    //        colorModule.color = gradientParticles;  // NullReferenceException: Do not create your own module instances, get them from a ParticleSystem instance ??
+    //        yield return null;
+    //    }
+    //}
+
     private IEnumerator ChangeLiquidColor(Color targetColor)
     {
-        if (liquidRenderer == null) yield break;
+        if (liquidRenderer == null || bubbles == null)
+            yield break;
 
         Material mat = liquidRenderer.material;
-        Color startColor = mat.color;
+
+        // Shader custom → on lit la bonne propriété
+        Color startColor = mat.GetColor("_PotionColor");
+
+        // Récupération DU MODULE depuis le ParticleSystem
+        var colorOverLifetime = bubbles.colorOverLifetime;
+        colorOverLifetime.enabled = true;
+
         float t = 0f;
 
         while (t < 1f)
         {
             t += Time.deltaTime * colorChangeSpeed;
-            mat.color = Color.Lerp(startColor, targetColor, t);
-            Gradient gradientParticles = new Gradient();
-            gradientParticles.SetKeys(
-                new GradientColorKey[] { new GradientColorKey(targetColor, 0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.15f), new GradientAlphaKey(0.0f, 1.0f) });
-            colorModule.color = gradientParticles;
+
+            Color currentColor = Color.Lerp(startColor, targetColor, t);
+
+            // 🔮 Liquide
+            mat.SetColor("_PotionColor", currentColor);
+
+            // 🫧 Particules
+            Gradient gradient = new Gradient();
+            gradient.SetKeys(
+                new GradientColorKey[]
+                {
+                new GradientColorKey(currentColor, 0f),
+                new GradientColorKey(currentColor, 1f)
+                },
+                new GradientAlphaKey[]
+                {
+                new GradientAlphaKey(1f, 0f),
+                new GradientAlphaKey(0f, 1f)
+                }
+            );
+
+            colorOverLifetime.color = new ParticleSystem.MinMaxGradient(gradient);
+
             yield return null;
         }
     }
