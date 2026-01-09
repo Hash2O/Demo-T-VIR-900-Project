@@ -30,6 +30,9 @@ public class IngredientData : ScriptableObject
     public Sprite icon; // Pour l’interface
     public GameObject prefab; // Pour instancier l'object dans la scène
 
+    [Header("Feedback visuel dans le chaudron")]
+    public GameObject ingredientFeedback;   // Pour instancier l'objet dans le chaudron
+
     // Options pour développer le système par la suite
     [Header("Caractéristiques gustatives")]
     public TasteProfile[] tastes; // Permet d’avoir plusieurs goûts simultanés

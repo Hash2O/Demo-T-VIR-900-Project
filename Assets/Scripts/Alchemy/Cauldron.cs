@@ -42,7 +42,7 @@ public class Cauldron : MonoBehaviour
     private bool recipeCompleted = false;   // Valide la réalisation d'une potion
     private RecipeData currentRecipe = null;    // Infos liées à la recette en cours
     private Color initialLiquidColor;   // Couleur de base du contenu du chaudron
-
+    private List<GameObject> activeIngredientFeedbacks = new(); // Feedbacks visuels actuellement actifs dans le chaudron
     private void Start()
     {
         // Affichage des slots "ingrédients" sur la cheminée, au démarrage (vide)
@@ -152,6 +152,37 @@ public class Cauldron : MonoBehaviour
                 StartCoroutine(HandleFailedMix());
             }
         }
+
+        // Feedback visuel de l’ingrédient
+        SpawnIngredientFeedback(data);
+    }
+
+    // Feedback visuel de l’ingrédient
+    private void SpawnIngredientFeedback(IngredientData data)
+    {
+        if (data.ingredientFeedback == null)
+            return;
+
+        // Décommenter pour éviter que tous les ingrédients flottent exactement au même endroit :
+        //Vector3 randomOffset = new Vector3(
+        //    Random.Range(-0.05f, 0.05f),
+        //    0f,
+        //    Random.Range(-0.05f, 0.05f)
+        //    );
+
+        // Position d’apparition : surface du chaudron
+        Vector3 spawnPos = liquidRenderer != null
+            ? liquidRenderer.transform.position + Vector3.up * 0.02f // + randomOffset
+            : transform.position;
+
+        GameObject feedback = Instantiate(
+            data.ingredientFeedback,
+            spawnPos,
+            Quaternion.identity,
+            transform   // parenté au chaudron
+        );
+
+        activeIngredientFeedbacks.Add(feedback);
     }
 
     private List<RecipeData> FindMatchingRecipes()
@@ -240,26 +271,6 @@ public class Cauldron : MonoBehaviour
 
         StartCoroutine(AutoResetAfterDelay(resetTime)); // reset après le temps défini dans l'inspector
     }
-
-    //private IEnumerator ChangeLiquidColor(Color targetColor)
-    //{
-    //    if (liquidRenderer == null) yield break;
-
-    //    Material mat = liquidRenderer.material;
-    //    Color startColor = mat.color;
-    //    float t = 0f;
-
-    //    while (t < 1f)
-    //    {
-    //        t += Time.deltaTime * colorChangeSpeed;
-    //        mat.color = Color.Lerp(startColor, targetColor, t);
-    //        Gradient gradientParticles = new Gradient();
-    //        gradientParticles.SetKeys(
-    //            new GradientColorKey[] { new GradientColorKey(targetColor, 0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.15f), new GradientAlphaKey(0.0f, 1.0f) });
-    //        colorModule.color = gradientParticles;  // NullReferenceException: Do not create your own module instances, get them from a ParticleSystem instance ??
-    //        yield return null;
-    //    }
-    //}
 
     private IEnumerator ChangeLiquidColor(Color targetColor)
     {
@@ -355,6 +366,15 @@ public class Cauldron : MonoBehaviour
 
         if (resetSound != null)
             resetSound.Play();
+
+        // 6️⃣ Feedbacks visuels ingrédients
+        foreach (var feedback in activeIngredientFeedbacks)
+        {
+            if (feedback != null)
+                Destroy(feedback);
+        }
+
+        activeIngredientFeedbacks.Clear();
 
         Debug.Log("Chaudron prêt pour une nouvelle recette !");
     }

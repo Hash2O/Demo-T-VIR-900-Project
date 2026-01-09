@@ -17,6 +17,7 @@ MonoBehaviour:
   type: 0
   icon: {fileID: 21300000, guid: 276b52d920c57634ab6d780d3f3c35ea, type: 3}
   prefab: {fileID: 5247572434833312648, guid: d91e05ac2d9d61e408ea176d6b29129a, type: 3}
+  ingredientFeedback: {fileID: 2235921987243128808, guid: 74601cfe07505b34890fd82af8594191, type: 3}
   tastes: 04000000
   specialEffects: []
   potency: 1
