@@ -10,11 +10,13 @@ public class ShakeDetector : MonoBehaviour
     public float minShakeInterval = 0.3f;            // anti-spam
     public float minHoldTime = 0.1f;                 // temps mini tenu avant de d�tecter
 
-    Rigidbody rb;
-    XRGrabInteractable grab;
-    Vector3 lastVelocity;
-    float lastShakeTime;
-    float grabbedTime;
+    private Rigidbody rb;
+    private XRGrabInteractable grab;
+    private Vector3 lastVelocity;
+    private float lastShakeTime;
+    private float grabbedTime;
+
+    private AudioSource audioSource;
 
     void Awake()
     {
@@ -23,6 +25,8 @@ public class ShakeDetector : MonoBehaviour
 
         grab.selectEntered.AddListener(_ => OnGrabbed());
         grab.selectExited.AddListener(_ => OnReleased());
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnDestroy()
@@ -65,6 +69,7 @@ public class ShakeDetector : MonoBehaviour
     {
         Debug.Log($"Shaken! accel={accel} strength={strength}");
         // TODO : d�clencher ton effet (particules, son, etc.)
+        if(strength > 100f) audioSource.Play();
     }
 }
 
