@@ -5,9 +5,12 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class Cauldron : MonoBehaviour
 {
+    public IngredientData ingredientToAdd;
+    
     [Header("Paramètres du chaudron")]
     public int maxIngredients = 3;  // Nbre d'ingrédients par défaut (jamais moins de 3, et jusqu'à 5 potentiellement)
     public List<IngredientData> addedIngredients = new();   // Gérer les ingrédients ajoutés au fur et à mesure
@@ -109,6 +112,7 @@ public class Cauldron : MonoBehaviour
         Debug.Log($"Ingrédient ajouté : {data.ingredientName}");
         UpdateIngredientUI();
 
+
         var possible = FindMatchingRecipes();
         Debug.Log("possible.Count : " + possible.Count);
 
@@ -132,6 +136,16 @@ public class Cauldron : MonoBehaviour
         {
             Debug.Log("Aucune recette valide avec ces ingrédients !");
             UpdateRecipeUI(null);
+        }
+
+        if(addedIngredients.Count == 1)
+        {
+            StartCoroutine(ChangeLiquidColor(data.colorHint));
+        }
+        else
+        {
+            Color mixedColor = Color.Lerp(liquidRenderer.material.GetColor("_PotionColor"), data.colorHint, 0.5f);
+            StartCoroutine(ChangeLiquidColor(mixedColor));     
         }
 
         if (currentRecipe != null && addedIngredients.Count >= currentRecipe.requiredIngredients.Length)
@@ -177,8 +191,8 @@ public class Cauldron : MonoBehaviour
 
         GameObject feedback = Instantiate(
             data.ingredientFeedback,
-            spawnPos,
-            Quaternion.identity,
+            /*spawnPos,
+            Quaternion.identity,*/
             transform   // parenté au chaudron
         );
 
@@ -217,7 +231,13 @@ public class Cauldron : MonoBehaviour
     }
 
     private void Update()
-    {
+    {        
+        if (Keyboard.current != null && Keyboard.current.enterKey.wasPressedThisFrame)
+        {       
+           // StartCoroutine(ChangeLiquidColor(Color.chocolate));
+            AddIngredient(ingredientToAdd);
+            Debug.Log("Enter pressed");
+        }
         if (!canStir || stirringManager == null || recipeCompleted) return;
 
         if (stirringManager.isWellStirred)
@@ -350,7 +370,24 @@ public class Cauldron : MonoBehaviour
         if (liquidRenderer != null)
         {
             StopAllCoroutines();
-            liquidRenderer.material.color = initialLiquidColor;
+            liquidRenderer.material.SetColor("_PotionColor", initialLiquidColor);
+            var colorOverLifetime = bubbles.colorOverLifetime;
+            colorOverLifetime.enabled = true;
+            Gradient gradient = new Gradient();
+            gradient.SetKeys(
+                new GradientColorKey[]
+                {
+                new GradientColorKey(initialLiquidColor, 0f),
+                new GradientColorKey(initialLiquidColor, 1f)
+                },
+                new GradientAlphaKey[]
+                {
+                new GradientAlphaKey(1f, 0f),
+                new GradientAlphaKey(0f, 1f)
+                }
+            );
+
+            colorOverLifetime.color = new ParticleSystem.MinMaxGradient(gradient);
         }
 
         // 4️⃣ Particules / sons

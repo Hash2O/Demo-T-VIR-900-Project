@@ -18,7 +18,8 @@ MonoBehaviour:
   type: 3
   icon: {fileID: 21300000, guid: 196c09401e9051c49828ac6c7fe0ffb7, type: 3}
   prefab: {fileID: 1267944760843135885, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
+  ingredientFeedback: {fileID: 0}
   tastes: 
   specialEffects: []
   potency: 1
-  colorHint: {r: 1, g: 1, b: 1, a: 1}
+  colorHint: {r: 0.78616345, g: 0, b: 0, a: 1}
