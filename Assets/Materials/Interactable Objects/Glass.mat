@@ -21,23 +21,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Glass
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 7fc7696935e5d464c8f7b3f6ced2fff8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
-  - _SURFACE_TYPE_TRANSPARENT
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
-  - DepthOnly
-  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -118,12 +113,20 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
+    - _InnerRimPower: 0.12
+    - _InnerRimSmoothness: 0.1
+    - _LightSpecCutoff: 0.324
+    - _LightSpecCutoffSmoothness: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _OuterRimPower: 1.98
+    - _OuterRimSmoothness: 0.18
     - _Parallax: 0.02
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _RimPower: 1
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -131,6 +134,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 1
     - _UVSec: 0
+    - _ViewSpecCutoff: 1
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 0
@@ -138,6 +142,9 @@ Material:
     - _BaseColor: {r: 0.6956435, g: 0.8726415, b: 0.84153104, a: 0.05882353}
     - _Color: {r: 0.6956435, g: 0.8726415, b: 0.84153104, a: 0.05882353}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _GlassColor: {r: 0.827044, g: 0.990696, b: 1, a: 0.023529412}
+    - _InnerRimColor: {r: 0.62578607, g: 1, b: 0.68709993, a: 1}
+    - _OuterRimColor: {r: 0.2130651, g: 0.509434, b: 0.41709048, a: 1}
+    - _SpecColor: {r: 0.5930738, g: 0.8808471, b: 0.98742133, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
