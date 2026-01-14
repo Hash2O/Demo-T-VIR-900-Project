@@ -151,13 +151,22 @@ public class GhostCycleManager : MonoBehaviour
     private IEnumerator GhostWaitTimer(System.Func<bool> isSatisfiedCheck)
     {
         remainingWaitTime = maxWaitTime;
-
+        if (activeGhost.ghostRenderer != null)
+        {
+            activeGhost.ghostRenderer.material.SetFloat("_Alpha", 1.0f);
+        }
         while (remainingWaitTime > 0f)
         {
             if (isSatisfiedCheck())
             {
                 if (activeGhost.patienceBar != null)
                     activeGhost.patienceBar.SetVisible(false);
+                if (activeGhost.ghostRenderer != null)
+                {
+
+                    activeGhost.ghostRenderer.material.SetFloat("_Alpha",Mathf.Lerp(activeGhost.ghostRenderer.material.GetFloat("_Alpha"),1.0f, 0.75f));
+                }
+
                 yield break;
             }
 
@@ -170,6 +179,11 @@ public class GhostCycleManager : MonoBehaviour
             {
                 float remainingPercent = remainingWaitTime / maxWaitTime;
                 activeGhost.patienceBar.SetFill(remainingPercent);
+            }
+            if (activeGhost.ghostRenderer != null)
+            {
+                float remainingPercent = remainingWaitTime / maxWaitTime;
+                activeGhost.ghostRenderer.material.SetFloat("_Alpha",remainingPercent);
             }
 
             yield return null;

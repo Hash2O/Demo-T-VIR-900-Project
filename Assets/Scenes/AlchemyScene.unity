@@ -5611,18 +5611,6 @@ PrefabInstance:
       value: Liquid Ichor Ingredient Bottle
       objectReference: {fileID: 0}
     - target: {fileID: 1933018022280114487, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933018022280114487, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933018022280114487, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933018022280114487, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.292
       objectReference: {fileID: 0}
@@ -5661,42 +5649,6 @@ PrefabInstance:
     - target: {fileID: 1933018022280114487, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4330824562173720575, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4330824562173720575, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861876525706578277, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861876525706578277, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: MaxDistance
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5878829281136307980, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 5878829281136307980, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 5878829281136307981, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5878829281136307981, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5878829281136307981, guid: 200b809ffb7e7a64aa32102dc3ab219f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29620,37 +29572,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1353326499}
     m_Modifications:
-    - target: {fileID: 2376248025999731340, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: Pan2D
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2376248025999731340, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2376248025999731340, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: MaxDistance
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5069569068314383766, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
       propertyPath: m_Name
       value: Liquid Poison Ingredient Bottle
       objectReference: {fileID: 0}
-    - target: {fileID: 5069569068314383766, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5553337023632215852, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 0.548
       objectReference: {fileID: 0}
     - target: {fileID: 5553337023632215852, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.437
+      value: 0.439
       objectReference: {fileID: 0}
     - target: {fileID: 5553337023632215852, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.061
+      value: -1.064
       objectReference: {fileID: 0}
     - target: {fileID: 5553337023632215852, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29662,11 +29598,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5553337023632215852, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000029802322
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5553337023632215852, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000029802322
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5553337023632215852, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -29674,38 +29610,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5553337023632215852, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5553337023632215852, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5569747506979022038, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 5569747506979022038, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 5569747506979022039, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5569747506979022039, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5569747506979022039, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5927480053206671956, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5927480053206671956, guid: cc06e4e297a57b3499a342e9543a1359, type: 3}
-      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -38019,11 +37927,11 @@ MonoBehaviour:
   ghostWaitPoint: {fileID: 1660823630}
   ghostExitPoint: {fileID: 777658689}
   ghostPrefabs:
-  - {fileID: 6928925104433890898, guid: c9017d7f981e8944ca4470972019714c, type: 3}
-  - {fileID: 2243891273464017590, guid: 9121196409c6ffc419834b338ec46634, type: 3}
-  - {fileID: 7271186510012269581, guid: e6684d10b204f5b4287e71fb2e55ce4c, type: 3}
-  - {fileID: 7271186510012269581, guid: d2a8edcc3b953254ea23116a4fa9f72a, type: 3}
-  - {fileID: 7271186510012269581, guid: c4e88a235df2db141b4da7b64e739be9, type: 3}
+  - {fileID: 7492574387322186502, guid: a7c99d9058d0cdf4da3194c75de3a500, type: 3}
+  - {fileID: 2315974465149695507, guid: 9971b731fe64e0144a1288057a9a32e3, type: 3}
+  - {fileID: 4978837553210059881, guid: 6297b8d459e2e8c4ab42d18b88ae75c9, type: 3}
+  - {fileID: 7805313971252525704, guid: 99473b1cdc31b834799ac2c4a5d36138, type: 3}
+  - {fileID: 7908044644123086282, guid: 6bbfa0566cb54564c8639fe18de429e0, type: 3}
   coinPrefab: {fileID: 5806976029930133173, guid: 4e8ae86a3d47d164ab134ebff68107c1, type: 3}
   keyPrefab: {fileID: 3141147471865295643, guid: 2b2d4a83c39e1bd4aaecab8d2dd00f84, type: 3}
   coinDeliveryPoint: {fileID: 654226763}
