@@ -27,7 +27,16 @@ public class VerminBusterManager : MonoBehaviour
             //Instantiate(splashPrefab, prefab.transform.position, Quaternion.identity);
             smashParticle.Play();
             smashAudio.Play();
-            if (collision.gameObject != null) Destroy(collision.gameObject);
+
+            VerminTrigger verminScript = collision.gameObject.GetComponent<VerminTrigger>();
+            if (verminScript != null)
+            {
+                verminScript.HitByWeapon();
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 

@@ -55,8 +55,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1456854200510100521, guid: d06adf5f27261b74e89c4399d9cd6815, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8184008093863686682}
   m_SourcePrefab: {fileID: 100100000, guid: d06adf5f27261b74e89c4399d9cd6815, type: 3}
+--- !u!1 &4963159489117703016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1456854200510100521, guid: d06adf5f27261b74e89c4399d9cd6815, type: 3}
+  m_PrefabInstance: {fileID: 5825237271540465473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8184008093863686682
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4963159489117703016}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9f93632be92911449caee5b8016ab8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &5740822814265971154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2268716357019299475, guid: d06adf5f27261b74e89c4399d9cd6815, type: 3}
@@ -134,7 +164,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Vermin
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
     m_RemovedGameObjects:
     - {fileID: -3430766827624471305, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
     - {fileID: 4039022864529267377, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
@@ -145,15 +176,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9102596803164449409}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9103598800807389056}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3651444041210577140}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3197053654438585008}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
       insertIndex: -1
@@ -161,77 +183,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5676943189700791312}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7452971156816886378}
   m_SourcePrefab: {fileID: 100100000, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
 --- !u!1 &6923641385968580908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
   m_PrefabInstance: {fileID: 7842138015254479997}
   m_PrefabAsset: {fileID: 0}
---- !u!195 &9102596803164449409
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923641385968580908}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!95 &9103598800807389056
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923641385968580908}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ee38e068f5e71d34ab035231491104e8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3651444041210577140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6923641385968580908}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 452d5dcf9dbef8547905cb77704e5e36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VerminManager
-  agent: {fileID: 9102596803164449409}
-  animator: {fileID: 9103598800807389056}
-  walkSpeed: 1
-  chaseSpeed: 2
-  rotationSpeed: 100000
-  wanderingWaitTimeMin: 2
-  wanderingWaitTimeMax: 5
-  wanderingDistanceMin: 0.5
-  wanderingDistanceMax: 1
 --- !u!54 &3197053654438585008
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -353,6 +313,8 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1
@@ -408,6 +370,19 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &7452971156816886378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6923641385968580908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf19a08580a25045a9af83f3f00aad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VerminTrigger
+  speed: 0.35
 --- !u!4 &7736735029864817558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 03faf25aba8ba5b4a973d0280013f3b4, type: 3}
