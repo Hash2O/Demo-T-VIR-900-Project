@@ -107,8 +107,8 @@ public class VerminMovement : MonoBehaviour
     {
         yield return null; 
 
-        float animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
-        yield return new WaitForSeconds(animationLength);
+        //float animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(0.5f);
 
         DestroyVerminObject();
     }

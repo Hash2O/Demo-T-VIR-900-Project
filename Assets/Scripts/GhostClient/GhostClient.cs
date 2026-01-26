@@ -17,8 +17,6 @@ public class GhostClient : MonoBehaviour
     public Renderer ghostRenderer;
 
 
-    public Color ghostColor;
-
     public float colorChangeSpeed = 4f;
 
     //private bool hasCheckedPotion = false;
@@ -31,8 +29,6 @@ public class GhostClient : MonoBehaviour
     {
         deliveryCounter = FindFirstObjectByType<PotionDeliveryCounter>();
         manager = FindFirstObjectByType<GhostCycleManager>();
-
-        ghostRenderer.material.SetColor("_MainColor", ghostColor);
     }
 
     private void Update()

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using DG.Tweening;
 
 public class PumpkinCounter : MonoBehaviour
 {
@@ -9,10 +10,10 @@ public class PumpkinCounter : MonoBehaviour
     [Header("Debug")]
     public int satisfiedClients = 0;
 
-    // Appelée par GhostClient lorsqu'un fantôme est satisfait
+    // Appelï¿½e par GhostClient lorsqu'un fantï¿½me est satisfait
     public void RegisterSatisfiedClient()
     {
-        // Trouver la première citrouille inactive
+        // Trouver la premiï¿½re citrouille inactive
         foreach (GameObject pumpkin in pumpkins)
         {
             if (!pumpkin.activeSelf)
@@ -24,50 +25,54 @@ public class PumpkinCounter : MonoBehaviour
                 if(AudioManager.audioInstance != null)
                     AudioManager.audioInstance.PlayTheGoodSound(5); // Success Notification
 
-                Debug.Log($"Citrouille activée ! Total : {satisfiedClients}");
+                Debug.Log($"Citrouille activï¿½e ! Total : {satisfiedClients}");
 
                 CheckForVictory();
                 return;
             }
         }
 
-        Debug.Log("Toutes les citrouilles sont déjà activées (clients supplémentaires ?)");
+        Debug.Log("Toutes les citrouilles sont dï¿½jï¿½ activï¿½es (clients supplï¿½mentaires ?)");
     }
 
     public void ActivatePumpkins()
     {
-        // Trouver la première citrouille inactive
+        // Trouver la premiï¿½re citrouille inactive
         foreach (GameObject pumpkin in pumpkins)
         {
             if (!pumpkin.activeSelf)
             {
+                Vector3 pumpkinSize = pumpkin.transform.localScale;
+                pumpkin.transform.DOScale(0.0f,.0f);
+                
                 pumpkin.SetActive(true);
+                pumpkin.transform.DOScale(pumpkinSize, 2.0f);
 
                 // Audio 
                 if (AudioManager.audioInstance != null)
                     AudioManager.audioInstance.PlayTheGoodSound(5); // Success Notification
 
-                Debug.Log($"Citrouille activée ! Total : {satisfiedClients}");
+                Debug.Log($"Citrouille activï¿½e ! Total : {satisfiedClients}");
 
                 //CheckForVictory();
                 return;
             }
         }
 
-        Debug.Log("Toutes les citrouilles sont déjà activées (clients supplémentaires ?)");
+        Debug.Log("Toutes les citrouilles sont dï¿½jï¿½ activï¿½es (clients supplï¿½mentaires ?)");
     }
 
-    // Appelée lorsqu'un fantôme repart frustré
+    // Appelï¿½e lorsqu'un fantï¿½me repart frustrï¿½
     public void RegisterUnsatisfiedClient()
     {
-        // On ne descend pas en-dessous de zéro
+        // On ne descend pas en-dessous de zï¿½ro
         if (satisfiedClients <= 0)
         {
-            Debug.Log("Aucune citrouille à retirer.");
+            Debug.Log("Aucune citrouille ï¿½ retirer.");
             return;
         }
 
-        // Trouver la dernière citrouille active
+        // Trouver la derniï¿½re citrouille active
         for (int i = pumpkins.Count - 1; i >= 0; i--)
         {
             if (pumpkins[i].activeSelf)
@@ -75,11 +80,11 @@ public class PumpkinCounter : MonoBehaviour
                 pumpkins[i].SetActive(false);
                 satisfiedClients--;
 
-                // Audio échec
+                // Audio ï¿½chec
                 if (AudioManager.audioInstance != null)
                     AudioManager.audioInstance.PlayTheGoodSound(8); // Horror lose
 
-                Debug.Log($"Citrouille désactivée... Total : {satisfiedClients}");
+                Debug.Log($"Citrouille dï¿½sactivï¿½e... Total : {satisfiedClients}");
                 return;
             }
         }
