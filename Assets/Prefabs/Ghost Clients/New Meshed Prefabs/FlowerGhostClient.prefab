@@ -320,7 +320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7198023815220236360
 RectTransform:
   m_ObjectHideFlags: 0
@@ -454,11 +454,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29edd13945e38f048a51f1a76c744f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostClient
-  requestedRecipe: {fileID: 11400000, guid: 2e2eb58f50d7c0345b98e92635ec3bf9, type: 2}
+  requestedRecipe: {fileID: 11400000, guid: 34f9f23a99e9ae54b9d3c18bd7bcaec7, type: 2}
   patienceBar: {fileID: 7209316971840191959}
   deliveryCounter: {fileID: 0}
   ghostRenderer: {fileID: 7613186840944550315}
-  ghostColor: {r: 0.28235295, g: 0.8784314, b: 0.09411765, a: 1}
   colorChangeSpeed: 4
   hasReceivedCorrectPotion: 0
   manager: {fileID: 0}
@@ -553,7 +552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &113937151657798325
 RectTransform:
   m_ObjectHideFlags: 0

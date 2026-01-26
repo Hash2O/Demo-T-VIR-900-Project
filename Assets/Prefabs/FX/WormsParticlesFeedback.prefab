@@ -287,7 +287,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.002
+      scalar: 0.0002
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4846,7 +4846,7 @@ ParticleSystemRenderer:
   m_VertexStreams: 00010304
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
-  m_Mesh: {fileID: 740423235306735273, guid: 0ab1cd4c4f4a1ed47b2184aa6dfbaa31, type: 3}
+  m_Mesh: {fileID: 740423235306735273, guid: 10460fac37281d14b8e1aad122b3c1bd, type: 3}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}

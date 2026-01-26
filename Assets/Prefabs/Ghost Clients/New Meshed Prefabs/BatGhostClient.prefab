@@ -107,7 +107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7921404145321191315
 RectTransform:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7938597132216364239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -495,12 +495,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29edd13945e38f048a51f1a76c744f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostClient
-  requestedRecipe: {fileID: 11400000, guid: 34f9f23a99e9ae54b9d3c18bd7bcaec7, type: 2}
+  requestedRecipe: {fileID: 11400000, guid: 8fbe1e8955f039547bf736896d57439d, type: 2}
   patienceBar: {fileID: 7952752752023938817}
   deliveryCounter: {fileID: 0}
   ghostRenderer: {fileID: 148274281614588168}
-  meshRenderer: {fileID: 148274281614588168}
-  ghostColor: {r: 1, g: 0.16862746, b: 0.8039216, a: 1}
   colorChangeSpeed: 4
   hasReceivedCorrectPotion: 0
   manager: {fileID: 0}
