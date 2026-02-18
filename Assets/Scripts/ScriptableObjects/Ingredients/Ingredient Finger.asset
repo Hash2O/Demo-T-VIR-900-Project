@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0920a524e085c9f498d17e12348d0767, type: 3}
-  m_Name: Ingredient Herbs
+  m_Name: Ingredient Finger
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  ingredientName: Herb
+  ingredientName: Finger
   description: "Le trois\xE8me ing\xE9rdient d'une reccette \xE0 succ\xE8s"
-  type: 0
+  type: 3
   icon: {fileID: 21300000, guid: 276b52d920c57634ab6d780d3f3c35ea, type: 3}
-  prefab: {fileID: 5247572434833312648, guid: d91e05ac2d9d61e408ea176d6b29129a, type: 3}
-  ingredientFeedback: {fileID: 2235921987243128808, guid: 74601cfe07505b34890fd82af8594191, type: 3}
+  prefab: {fileID: 9097121015118502953, guid: f63191c317aedd84f8e5e3381f94d6d3, type: 3}
+  ingredientFeedback: {fileID: 2235921987243128808, guid: 3cb6bfb433b7d1146b4929bf9502261c, type: 3}
   tastes: 04000000
   specialEffects: []
   potency: 1
-  colorHint: {r: 0.76729554, g: 0.43153644, b: 0.20509459, a: 1}
+  colorHint: {r: 0.8490566, g: 0.43205082, b: 0.36044845, a: 1}
