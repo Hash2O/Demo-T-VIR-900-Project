@@ -214,6 +214,8 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1
@@ -281,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9192da6ad663f864cafa77018c0d8f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VerminBusterManager
-  smashPrefab: {fileID: 7157846214639822833, guid: 9023bab123144b74a95f04d3331c0ab2, type: 3}
+  smashPrefab: {fileID: 2209613482177847170, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
   smashParticle: {fileID: 643863492434836860, guid: 40e7aeb55775380449512397f895c406, type: 3}
   impactVelocity: 0.3
 --- !u!82 &282546921385519364

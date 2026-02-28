@@ -37,7 +37,7 @@ Material:
     m_Colors:
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 1, g: 0, b: 0.10514355, a: 1}
-    - _TopColor: {r: 1, g: 0, b: 0.10588236, a: 1}
+    - _Tint: {r: 0.18059295, g: 0.18059295, b: 0.18059295, a: 1}
+    - _TopColor: {r: 0.13746631, g: 0.13746631, b: 0.13746631, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
