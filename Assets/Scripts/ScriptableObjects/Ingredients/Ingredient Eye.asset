@@ -17,7 +17,7 @@ MonoBehaviour:
     En plus de relever toutes les d\xE9coctions !"
   type: 3
   icon: {fileID: 21300000, guid: 93f6c6d15e7020341af2ebfc11859675, type: 3}
-  prefab: {fileID: 5535441106656542469, guid: 7d8e75e80b7c95f4a8b4e0a81b5ed539, type: 3}
+  prefab: {fileID: 7310008670533336731, guid: a0ef0502f18cf974d86a8b2da4a95507, type: 3}
   ingredientFeedback: {fileID: 2283758336093300875, guid: 88b2297acacdd9c47bad2e012441e5ae, type: 3}
   tastes: 0000000002000000
   specialEffects:

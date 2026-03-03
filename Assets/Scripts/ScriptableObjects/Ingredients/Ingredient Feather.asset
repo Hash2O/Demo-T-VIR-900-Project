@@ -16,9 +16,9 @@ MonoBehaviour:
   description: "Le trois\xE8me ing\xE9rdient d'une reccette \xE0 succ\xE8s"
   type: 3
   icon: {fileID: 21300000, guid: 276b52d920c57634ab6d780d3f3c35ea, type: 3}
-  prefab: {fileID: 1992485552176598421, guid: 55510056e018b7b4c9679e9b43c53e10, type: 3}
-  ingredientFeedback: {fileID: 2235921987243128808, guid: 8238ece0f6e9ea446a7cc26d7b99e37b, type: 3}
+  prefab: {fileID: 7736852305298685213, guid: 593406160c8901e41b1b73a1edc2fb66, type: 3}
+  ingredientFeedback: {fileID: 2235921987243128808, guid: 621e477b5eb1687408f622bad66c5444, type: 3}
   tastes: 0300000000000000
   specialEffects: []
   potency: 1
-  colorHint: {r: 0.21383637, g: 0.09123145, b: 0.07060633, a: 1}
+  colorHint: {r: 0.30799896, g: 0.112896055, b: 0.4056604, a: 1}
