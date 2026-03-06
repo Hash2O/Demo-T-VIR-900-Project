@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -43,6 +43,7 @@ public class GhostCycleManager : MonoBehaviour
     [Header("Patience penalties")]
     [Tooltip("Temps retiré à la patience du fantôme en cas de mauvaise potion")]
     public float wrongPotionPenalty = 30f;
+    public PostProcessManager postProcessManager;
 
     private bool isSpawning = false; 
     private float remainingWaitTime;    // Stockage du temps restant quand le fantôme est satisfait (gestion récompense bonus)
@@ -198,6 +199,8 @@ public class GhostCycleManager : MonoBehaviour
         if (activeGhost.patienceBar != null) activeGhost.patienceBar.SetVisible(false); // Désactivation de la barre de patience
         if (coinTrigger != null) coinTrigger.CoinRemoving();    // Si pièce dans la tirelire, le fantôme en enlève une 
         if (AudioManager.audioInstance != null) AudioManager.audioInstance.PlayNotificationSound(1);    // Fail Notification Horror
+        if (postProcessManager != null) postProcessManager.DarkenScreen();
+        
         
     }
 
