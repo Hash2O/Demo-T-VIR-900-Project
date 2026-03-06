@@ -17,7 +17,7 @@ MonoBehaviour:
     \xE0 toutes vos recettes."
   type: 2
   icon: {fileID: 21300000, guid: 455bcf144c2cbc64aaf368fa98d024c1, type: 3}
-  prefab: {fileID: 7157846214639822833, guid: 9023bab123144b74a95f04d3331c0ab2, type: 3}
+  prefab: {fileID: 2209613482177847170, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
   ingredientFeedback: {fileID: 5898923847759704421, guid: 9dacc4c851d6eb845bcdecbff0921aa8, type: 3}
   tastes: 
   specialEffects: []

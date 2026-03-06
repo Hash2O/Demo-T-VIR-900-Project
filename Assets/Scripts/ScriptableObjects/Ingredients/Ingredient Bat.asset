@@ -17,9 +17,9 @@ MonoBehaviour:
     vos invit\xE9s les plus d\xE9licats."
   type: 2
   icon: {fileID: 21300000, guid: 77e53d5ec29c41e4c887e59c605f9aaa, type: 3}
-  prefab: {fileID: 89636290738737659, guid: c4e575a8791a4524a9319ba04f6a0b22, type: 3}
-  ingredientFeedback: {fileID: 5979334897754981059, guid: 11e45145df6b1df4cba212c384d792ce, type: 3}
+  prefab: {fileID: 1554534431114073434, guid: dfaefe77bcb4dc646aaf15d4cb0978ab, type: 3}
+  ingredientFeedback: {fileID: 8015161693338118254, guid: 4c72756f91332c54298277bc67850d31, type: 3}
   tastes: 02000000
   specialEffects: []
   potency: 1
-  colorHint: {r: 0.3962264, g: 0.120861456, b: 0.21711744, a: 1}
+  colorHint: {r: 0.20754719, g: 0.15566039, b: 0.17345016, a: 1}
