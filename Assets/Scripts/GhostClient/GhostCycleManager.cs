@@ -43,7 +43,13 @@ public class GhostCycleManager : MonoBehaviour
     [Header("Patience penalties")]
     [Tooltip("Temps retiré à la patience du fantôme en cas de mauvaise potion")]
     public float wrongPotionPenalty = 30f;
+
+
+    
+    [Header("Références Endless Mode")]
+    public  EndlessModeManager endlessModeManager;
     public PostProcessManager postProcessManager;
+    public bool endlessModeTimeOut;
 
     private bool isSpawning = false; 
     private float remainingWaitTime;    // Stockage du temps restant quand le fantôme est satisfait (gestion récompense bonus)
@@ -57,6 +63,8 @@ public class GhostCycleManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(GhostCycleLoop());
+        if (endlessModeManager != null)
+            endlessModeManager.StartCountdown();
     }
 
     private IEnumerator GhostCycleLoop()
@@ -65,6 +73,9 @@ public class GhostCycleManager : MonoBehaviour
         {
             // Tant que le joueur n’est PAS dans la zone → pause
             while (!isPlayerInside)
+                yield return null;
+            
+            if(endlessModeTimeOut)
                 yield return null;
 
             // Tant qu’on est en pause, SpawnGhost n’est pas lancé.
@@ -241,6 +252,9 @@ public class GhostCycleManager : MonoBehaviour
             Instantiate(keyPrefab, keyDeliveryPoint.position, Quaternion.identity);
 
         Debug.Log($"{coinCount} pièce(s) récompensent la sorcière !");
+
+        if (endlessModeManager != null)
+            endlessModeManager.AddBonusTime();
     }
 }
 
