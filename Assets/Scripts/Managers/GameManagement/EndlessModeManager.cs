@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.Rendering;
 
 public class EndlessModeManager : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class EndlessModeManager : MonoBehaviour
     public float bonusTimeInSeconds;
     
     public float elapsedTime;
+    public Transform clockPointer;
+    public float degres;
 
     private bool timeOut, timeUp, endSounPlaying;
 
@@ -18,6 +22,7 @@ public class EndlessModeManager : MonoBehaviour
     {
         elapsedTime = 0f;
         modeDurationInSeconds = modeDurationInMinutes * 60;
+        degres = 360/modeDurationInSeconds;
     }
 
     // Update is called once per frame
@@ -48,12 +53,21 @@ public class EndlessModeManager : MonoBehaviour
     public void StartCountdown()
     {
         timeUp = true;
+        StartCoroutine(SecondPointerMovement());
     }
 
     private void EndSound()
     {  
         audioManager.PlayTheGoodSound(13);
         endSounPlaying = true;
+    }
+    private IEnumerator SecondPointerMovement()
+    {
+        while(!timeOut && timeUp)
+         {
+            yield return new WaitForSeconds(1.0f);
+            clockPointer.Rotate(0f, 0f, degres);
+         }
     }
 
     private void TimeOut()
