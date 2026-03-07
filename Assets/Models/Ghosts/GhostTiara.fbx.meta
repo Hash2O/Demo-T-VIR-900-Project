@@ -10,7 +10,7 @@ ModelImporter:
       name: PrincessTiara
     second: {fileID: 2100000, guid: 30ea66ff922d55047b56596803dcebbd, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1

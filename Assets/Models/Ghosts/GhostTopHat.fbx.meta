@@ -10,7 +10,7 @@ ModelImporter:
       name: hat1
     second: {fileID: 2100000, guid: c1b7f1d553a83d941a4f9f71281162cd, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1

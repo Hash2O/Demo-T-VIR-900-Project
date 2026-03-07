@@ -10,7 +10,7 @@ ModelImporter:
       name: Graves_lambert7SG
     second: {fileID: 2100000, guid: 80ee873af2cd24d49b577f2005613106, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1

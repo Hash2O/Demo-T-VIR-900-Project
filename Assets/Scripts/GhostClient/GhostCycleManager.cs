@@ -51,6 +51,8 @@ public class GhostCycleManager : MonoBehaviour
     public PostProcessManager postProcessManager;
     public bool endlessModeTimeOut;
 
+    public int index;
+
     private bool isSpawning = false; 
     private float remainingWaitTime;    // Stockage du temps restant quand le fantôme est satisfait (gestion récompense bonus)
 
@@ -74,12 +76,9 @@ public class GhostCycleManager : MonoBehaviour
             // Tant que le joueur n’est PAS dans la zone → pause
             while (!isPlayerInside)
                 yield return null;
-            
-            if(endlessModeTimeOut)
-                yield return null;
 
             // Tant qu’on est en pause, SpawnGhost n’est pas lancé.
-            if (!isSpawning && activeGhost == null)
+            if (!isSpawning && activeGhost == null && !endlessModeTimeOut)
             {
                 yield return StartCoroutine(SpawnGhost());
             }
@@ -94,7 +93,9 @@ public class GhostCycleManager : MonoBehaviour
         yield return new WaitForSeconds(spawnDelay);
 
         // Spawn du fantôme
-        GameObject prefab = ghostPrefabs[Random.Range(0, ghostPrefabs.Count)];
+        //GameObject prefab = ghostPrefabs[Random.Range(0, ghostPrefabs.Count)];
+        GameObject prefab = ghostPrefabs[index];
+        index++;
         GameObject ghostObj = Instantiate(prefab, ghostSpawnPoint.position, Quaternion.identity);
         activeGhost = ghostObj.GetComponent<GhostClient>();
 
@@ -162,10 +163,16 @@ public class GhostCycleManager : MonoBehaviour
 
     private IEnumerator GhostWaitTimer(System.Func<bool> isSatisfiedCheck)
     {
+            Debug.Log(activeGhost);
         remainingWaitTime = maxWaitTime;
         if (activeGhost.ghostRenderer != null)
-        {
-            activeGhost.ghostRenderer.material.SetFloat("_Alpha", 1.0f);
+        { 
+            foreach(Material mat in activeGhost.ghostRenderer.materials)
+            {
+                
+            Debug.Log(mat);
+                mat.SetFloat("_Alpha", 1.0f);
+            }
         }
         while (remainingWaitTime > 0f)
         {
@@ -175,8 +182,11 @@ public class GhostCycleManager : MonoBehaviour
                     activeGhost.patienceBar.SetVisible(false);
                 if (activeGhost.ghostRenderer != null)
                 {
-
-                    activeGhost.ghostRenderer.material.SetFloat("_Alpha",Mathf.Lerp(activeGhost.ghostRenderer.material.GetFloat("_Alpha"),1.0f, 0.75f));
+                    foreach(Material mat in activeGhost.ghostRenderer.materials)
+                    {       
+                        Debug.Log(mat);
+                        mat.SetFloat("_Alpha",Mathf.Lerp(activeGhost.ghostRenderer.material.GetFloat("_Alpha"),1.0f, 0.75f));
+                    }
                 }
 
                 yield break;
@@ -195,7 +205,11 @@ public class GhostCycleManager : MonoBehaviour
             if (activeGhost.ghostRenderer != null)
             {
                 float remainingPercent = remainingWaitTime / maxWaitTime;
-                activeGhost.ghostRenderer.material.SetFloat("_Alpha",remainingPercent);
+                foreach(Material mat in activeGhost.ghostRenderer.materials)
+                {       
+                    Debug.Log(mat);
+                    mat.SetFloat("_Alpha",remainingPercent);
+                }
             }
 
             yield return null;
