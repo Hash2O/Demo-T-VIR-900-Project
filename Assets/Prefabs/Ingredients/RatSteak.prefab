@@ -213,8 +213,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.15469122, y: 0.019126605, z: 0.13705301}
-  m_Center: {x: 0.0031818151, y: 0.00076667126, z: 0.007502569}
+  m_Size: {x: 0.15469122, y: 0.02925514, z: 0.13705301}
+  m_Center: {x: 0.0031818151, y: 0.015273659, z: 0.0075025707}
 --- !u!114 &5436955002247906521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +301,8 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1

@@ -8166,6 +8166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BellManager
   ghostManager: {fileID: 2136085430}
   startNotificationVFX: {fileID: 1669358321}
+  isBellActivated: 0
 --- !u!1001 &387786252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24318,6 +24319,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1566010743}
     m_Modifications:
+    - target: {fileID: 236919572331488937, guid: e7cba61a077eba74dabac4218f644402, type: 3}
+      propertyPath: ingredientPrefab
+      value: 
+      objectReference: {fileID: 7972581387295880273, guid: c4e575a8791a4524a9319ba04f6a0b22, type: 3}
     - target: {fileID: 352142515448816300, guid: e7cba61a077eba74dabac4218f644402, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07499999
@@ -26403,6 +26408,8 @@ MonoBehaviour:
   - {fileID: 124291896}
   - {fileID: 1951445214}
   satisfiedClients: 0
+  clientsToSatisfyThisNight: 0
+  totalSatisfiedClients: 0
 --- !u!1001 &1467543957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26667,6 +26674,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 272824a358aa7a144b4b099de82c00ea, type: 3}
   m_PrefabInstance: {fileID: 1487809871}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1492584878
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1576769415149487416, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1606693
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576769415149487416, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.025273
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576769415149487416, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.50855815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576769415149487416, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.024270117
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576769415149487416, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.9997055
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576769415149487416, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576769415149487416, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576769415149487416, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -177.219
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576769415149487416, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1576769415149487416, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209613482177847170, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
+      propertyPath: m_Name
+      value: RatSteak
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5cd85091db862e4f87adfde4fe437da, type: 3}
 --- !u!1 &1498555336
 GameObject:
   m_ObjectHideFlags: 0
@@ -39630,7 +39694,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2e2eb58f50d7c0345b98e92635ec3bf9, type: 2}
   - {fileID: 11400000, guid: 37e7bc3461b78db46b39db3e90861a1b, type: 2}
   - {fileID: 11400000, guid: 3bf6f3a0025b6b547a5bb0e7d1a328e2, type: 2}
-  newRecipeText: {fileID: 1536325911}
 --- !u!4 &2128511753
 Transform:
   m_ObjectHideFlags: 0
@@ -39900,12 +39963,6 @@ MonoBehaviour:
   ghostSpawnPoint: {fileID: 2132609881}
   ghostWaitPoint: {fileID: 1660823630}
   ghostExitPoint: {fileID: 777658689}
-  ghostPrefabs:
-  - {fileID: 7492574387322186502, guid: a7c99d9058d0cdf4da3194c75de3a500, type: 3}
-  - {fileID: 2315974465149695507, guid: 9971b731fe64e0144a1288057a9a32e3, type: 3}
-  - {fileID: 4978837553210059881, guid: 6297b8d459e2e8c4ab42d18b88ae75c9, type: 3}
-  - {fileID: 7805313971252525704, guid: 99473b1cdc31b834799ac2c4a5d36138, type: 3}
-  - {fileID: 7908044644123086282, guid: 6bbfa0566cb54564c8639fe18de429e0, type: 3}
   coinPrefab: {fileID: 5806976029930133173, guid: 4e8ae86a3d47d164ab134ebff68107c1, type: 3}
   keyPrefab: {fileID: 3141147471865295643, guid: 2b2d4a83c39e1bd4aaecab8d2dd00f84, type: 3}
   coinDeliveryPoint: {fileID: 654226763}
@@ -39921,7 +39978,6 @@ MonoBehaviour:
   isPlayerInside: 0
   isPaused: 0
   wrongPotionPenalty: 30
-  postProcessManager: {fileID: 0}
 --- !u!1 &2137235237
 GameObject:
   m_ObjectHideFlags: 0
@@ -40750,3 +40806,4 @@ SceneRoots:
   - {fileID: 1853231350}
   - {fileID: 1609576438}
   - {fileID: 2075272974}
+  - {fileID: 1492584878}

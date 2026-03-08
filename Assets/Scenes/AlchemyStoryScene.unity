@@ -39080,6 +39080,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 34f9f23a99e9ae54b9d3c18bd7bcaec7, type: 2}
   - {fileID: 11400000, guid: 60cafed22d032864096b845f601204cc, type: 2}
   - {fileID: 11400000, guid: 331e32753c307bc4bb87f360133bf3b6, type: 2}
+  - {fileID: 11400000, guid: 91206900debd83c45a25cd51823c23e0, type: 2}
   discoveredRecipes: []
 --- !u!4 &2128511753
 Transform:

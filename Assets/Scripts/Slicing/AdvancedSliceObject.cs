@@ -98,6 +98,8 @@ public class AdvancedSliceObject : MonoBehaviour
 
     private void SliceAndDice(GameObject target, IngredientBehaviour originalIngredient)
     {
+        Debug.Log("Target : " + target.name + " Ingredient : " + originalIngredient.name);
+
         Vector3 velocity = velocityEstimator != null ? velocityEstimator.GetVelocityEstimate() : Vector3.forward;
         Vector3 planeNormal = Vector3.Cross(endSlicePoint.position - startSlicePoint.position, velocity).normalized;
 
@@ -141,7 +143,7 @@ public class AdvancedSliceObject : MonoBehaviour
         // Hériter du comportement d’ingrédient
         IngredientBehaviour newIngredient = slicedPart.AddComponent<IngredientBehaviour>();
 
-        // Hériter des datas du parent
+        //Hériter des datas du parent
         //if (parentIngredient != null)
         //{
         //    newIngredient.data = parentIngredient.data; // Héritage de la RecipeData
@@ -153,6 +155,9 @@ public class AdvancedSliceObject : MonoBehaviour
             switch (parentIngredient.name)
             {
                 case "RatSteak":
+                    newIngredient.data = ingredientPartsData[0];    // Ingredient Half Steak
+                    break;
+                case "RatSteak(Clone)":
                     newIngredient.data = ingredientPartsData[0];    // Ingredient Half Steak
                     break;
                 default:

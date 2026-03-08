@@ -23,4 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 593b19ad7eb9bdf41909df68525d379e, type: 2}
   - {fileID: 11400000, guid: 18e4bdef1bf73fe489acc954a39c1ba5, type: 2}
   ghostPrefab: {fileID: 4978837553210059881, guid: 6297b8d459e2e8c4ab42d18b88ae75c9, type: 3}
-  isKnownAtStart: 1
+  isKnownAtStart: 0
