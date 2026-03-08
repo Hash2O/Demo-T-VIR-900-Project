@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29edd13945e38f048a51f1a76c744f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostClient
-  requestedRecipe: {fileID: 11400000, guid: 3bf6f3a0025b6b547a5bb0e7d1a328e2, type: 2}
+  requestedRecipe: {fileID: 11400000, guid: 30365140168a04f4e9b5c805be9de8c8, type: 2}
   patienceBar: {fileID: 5581975944775775107}
   deliveryCounter: {fileID: 0}
   ghostRenderer: {fileID: 549738447028450175}
@@ -586,7 +586,7 @@ Transform:
   m_GameObject: {fileID: 9004745245214584204}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0.10146761, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -599,7 +599,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9004745245214584204}
-  m_Mesh: {fileID: 2484724097796132137, guid: 8574f635fa3c7d94da2966ac576e2655, type: 3}
+  m_Mesh: {fileID: 4536773283001372330, guid: 8574f635fa3c7d94da2966ac576e2655, type: 3}
 --- !u!23 &549738447028450175
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -625,7 +625,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 324ca0682948b5c4c8f493d7fcff5db7, type: 2}
   - {fileID: 2100000, guid: c65571568b7c4e440af21b0329d9959c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

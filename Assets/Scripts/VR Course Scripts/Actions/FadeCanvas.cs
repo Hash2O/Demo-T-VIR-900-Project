@@ -19,7 +19,6 @@ public class FadeCanvas : MonoBehaviour
 
     private void Awake()
     {
-        if (this.gameObject.activeInHierarchy == false) this.gameObject.SetActive(true);
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
