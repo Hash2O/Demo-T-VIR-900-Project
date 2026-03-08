@@ -228,6 +228,7 @@ public class GhostCycleManager : MonoBehaviour
         if (activeGhost.patienceBar != null) activeGhost.patienceBar.SetVisible(false); // Désactivation de la barre de patience
         if (coinTrigger != null) coinTrigger.CoinRemoving();    // Si pièce dans la tirelire, le fantôme en enlève une 
         if (AudioManager.audioInstance != null) AudioManager.audioInstance.PlayNotificationSound(1);    // Fail Notification Horror
+        if(postProcessManager != null)
             postProcessManager.DarkenScreen();
 
     }
