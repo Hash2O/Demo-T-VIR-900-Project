@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0920a524e085c9f498d17e12348d0767, type: 3}
   m_Name: Ingredient Hair
   m_EditorClassIdentifier: Assembly-CSharp::IngredientData
-  ingredientName: Nail
+  ingredientName: Hair
   description: "Le trois\xE8me ing\xE9rdient d'une reccette \xE0 succ\xE8s"
   type: 3
   icon: {fileID: 21300000, guid: 276b52d920c57634ab6d780d3f3c35ea, type: 3}

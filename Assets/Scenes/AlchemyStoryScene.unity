@@ -39667,6 +39667,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e999e7f9603d80a478ab3987ed0c40fc, type: 2}
+    - target: {fileID: 3306145745870613527, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3498340566267043471, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_Name
       value: Butcher_Knife
@@ -39685,43 +39689,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.49800006
+      value: 0.467
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.295
+      value: 1.3585019
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.40900126
+      value: -0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.18211764
+      value: -0.042822625
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.66541505
+      value: -0.68855655
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.69414884
+      value: -0.7232943
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.20545933
+      value: 0.030025717
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -31.844
+      value: 5.878
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -91.389
+      value: -181.186
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 87.975
+      value: 87.12
       objectReference: {fileID: 0}
     - target: {fileID: 4307493591088874549, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -39767,6 +39771,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 8405413741994370068, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
+      propertyPath: ingredientPartsData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405413741994370068, guid: d6c57dbe3f5c352468bb7f882b2e3188, type: 3}
+      propertyPath: 'ingredientPartsData.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b9fba8c27a65d44182af156209de484, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

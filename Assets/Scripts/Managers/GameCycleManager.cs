@@ -55,6 +55,7 @@ public class GameCycleManager : MonoBehaviour
         directionalLight.intensity = 1.2f;
 
         bell.SetEnabled(true); // Clochette activée
+
         bellManager.isBellActivated = false;
 
         Debug.Log($"☀️ Jour {currentDay + 1}");

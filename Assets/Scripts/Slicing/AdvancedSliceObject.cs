@@ -58,6 +58,8 @@ using UnityEngine;
 using EzySlice;
 using Valve.VR.InteractionSystem;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 public class AdvancedSliceObject : MonoBehaviour
 {
@@ -71,6 +73,9 @@ public class AdvancedSliceObject : MonoBehaviour
 
     [Header("Physics Settings")]
     public float sliceForce = 200f;
+
+    [Header("List of Possible Ingredients Parts")]
+    public List<IngredientData> ingredientPartsData;    // Liste des nouveaux ingredients, constituée des moitiés d'ingredients plus grands
 
     private bool isCutting = false;
 
@@ -100,11 +105,11 @@ public class AdvancedSliceObject : MonoBehaviour
 
         if (hull != null)
         {
-            GameObject upperHull = hull.CreateUpperHull(target, crossSectionMaterials);
-            SetupSlicedComponents(upperHull, originalIngredient);
+            GameObject partOne = hull.CreateUpperHull(target, crossSectionMaterials);
+            SetupSlicedComponents(partOne, originalIngredient);
 
-            GameObject lowerHull = hull.CreateLowerHull(target, crossSectionMaterials);
-            SetupSlicedComponents(lowerHull, originalIngredient);
+            GameObject partTwo = hull.CreateLowerHull(target, crossSectionMaterials);
+            SetupSlicedComponents(partTwo, originalIngredient);
 
             // On détruit l'objet original
             Destroy(target);
@@ -118,9 +123,14 @@ public class AdvancedSliceObject : MonoBehaviour
 
     private void SetupSlicedComponents(GameObject slicedPart, IngredientBehaviour parentIngredient)
     {
+        // Donner un nom au nouvel élément
+        slicedPart.name = "Morceau de " + parentIngredient.name;
+        // Modifier le tag pour qu'il soit reconnu comme ingredient par le chaudron afin de valider la recette
         slicedPart.tag = "Ingredient";
-        slicedPart.layer = 6;
+        // Changer de layer pour éviter que les nouveaux morceaux puissent etre coupés à nouveau
+        slicedPart.layer = 0;   // Default layer = 0, Slicable layer = 6
 
+        // Le rendre interagissable
         Rigidbody rb = slicedPart.AddComponent<Rigidbody>();
         MeshCollider collider = slicedPart.AddComponent<MeshCollider>();
         collider.convex = true;
@@ -131,9 +141,24 @@ public class AdvancedSliceObject : MonoBehaviour
         // Hériter du comportement d’ingrédient
         IngredientBehaviour newIngredient = slicedPart.AddComponent<IngredientBehaviour>();
 
+        // Hériter des datas du parent
+        //if (parentIngredient != null)
+        //{
+        //    newIngredient.data = parentIngredient.data; // Héritage de la RecipeData
+        //}
+
         if (parentIngredient != null)
         {
-            newIngredient.data = parentIngredient.data; // Héritage de la RecipeData
+            Debug.Log("Changement Ingredient Data");
+            switch (parentIngredient.name)
+            {
+                case "RatSteak":
+                    newIngredient.data = ingredientPartsData[0];    // Ingredient Half Steak
+                    break;
+                default:
+                    newIngredient.data = parentIngredient.data;
+                    break;
+            }
         }
 
         // Optionnel : légère poussée pour séparer visuellement les morceaux

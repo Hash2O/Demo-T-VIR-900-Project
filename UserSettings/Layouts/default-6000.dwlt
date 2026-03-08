@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1440
     height: 720
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -96,8 +96,8 @@ MonoBehaviour:
     y: 0
     width: 312
     height: 664
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -327,8 +327,8 @@ MonoBehaviour:
     y: 0
     width: 268
     height: 376.5
-  m_MinSize: {x: 202, y: 226}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 24}
   m_Panes:
   - {fileID: 24}
@@ -4175,9 +4175,9 @@ MonoBehaviour:
     m_SceneHandles: []
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 1
+    m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/ScriptableObjects/Recipes
+    - Assets/Scripts/ScriptableObjects/Ingredients
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -4200,8 +4200,13 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 62304
-    - m_Data: 62306
+    - m_Data: 62170
+    - m_Data: 62172
+    - m_Data: 62174
+    - m_Data: 62176
+    - m_Data: 62178
+    - m_Data: 62180
+    - m_Data: 62182
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4228,25 +4233,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 724.5}
+    scrollPos: {x: 0, y: 572.5}
     m_SelectedIDs:
-    - m_Data: -39152
+    - m_Data: -3340
     m_LastClickedID:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 62304
-    - m_Data: 62604
-    - m_Data: 62622
-    - m_Data: 75102
-    - m_Data: 98170
-    - m_Data: 98172
-    - m_Data: 118886
-    - m_Data: 172188
+    - m_Data: 62170
+    - m_Data: 62172
+    - m_Data: 62174
+    - m_Data: 62176
+    - m_Data: 62178
+    - m_Data: 62180
+    - m_Data: 62182
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: FlowerGhostClient
-      m_OriginalName: FlowerGhostClient
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -4254,10 +4258,10 @@ MonoBehaviour:
         width: 0
         height: 0
       m_UserData:
-        m_Data: 55964
+        m_Data: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 2}
@@ -4270,8 +4274,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -39152
-    m_LastClickedInstanceID: -39152
+    - m_Data: -3340
+    m_LastClickedInstanceID: -3340
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
@@ -5043,9 +5047,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -2.8149273, y: 1.461196, z: 0.27874494}
+    m_Target: {x: 2.5256102, y: -0.11755279, z: -0.08514074}
     speed: 2
-    m_Value: {x: -2.8149273, y: 1.461196, z: 0.27874494}
+    m_Value: {x: 2.5256102, y: -0.11755279, z: -0.08514074}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -5091,9 +5095,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.27163342, y: 0.5651841, z: -0.20517594, w: -0.7518459}
+    m_Target: {x: 0.29524332, y: 0.65927964, z: -0.31497517, w: 0.61609024}
     speed: 2
-    m_Value: {x: -0.27211708, y: 0.5648641, z: -0.20553973, w: -0.7514214}
+    m_Value: {x: 0.29515553, y: 0.6590836, z: -0.3148815, w: 0.6159071}
   m_Size:
     m_Target: 1.5649046
     speed: 2
@@ -5173,27 +5177,14 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: -39152
+      - m_Data: -3340
       m_LastClickedID:
-        m_Data: -39152
+        m_Data: -3340
       m_ExpandedIDs:
-      - m_Data: -93960
-      - m_Data: -92614
-      - m_Data: -75114
-      - m_Data: -40920
-      - m_Data: -40136
-      - m_Data: -39152
-      - m_Data: -38298
-      - m_Data: -33442
-      - m_Data: -29140
-      - m_Data: -24316
       - m_Data: -1300
-      - m_Data: 52142
-      - m_Data: 53324
-      - m_Data: 106884
-      - m_Data: 107594
-      - m_Data: 107708
-      - m_Data: 108248
+      - m_Data: 52630
+      - m_Data: 53150
+      - m_Data: 53756
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
