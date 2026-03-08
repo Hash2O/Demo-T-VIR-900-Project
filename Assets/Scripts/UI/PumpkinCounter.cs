@@ -277,7 +277,9 @@
 
 using UnityEngine;
 using System.Collections.Generic;
-
+using DG.Tweening;
+using System.Numerics;
+using Vector3 = UnityEngine.Vector3;
 public class PumpkinCounter : MonoBehaviour
 {
     public static PumpkinCounter Instance { get; private set; }
@@ -376,7 +378,10 @@ public class PumpkinCounter : MonoBehaviour
         {
             if (pumpkins[i] == null) continue;
 
+            Vector3 scale = pumpkins[i].transform.localScale;
+            pumpkins[i].transform.localScale = Vector3.zero;
             pumpkins[i].SetActive(i < satisfiedClients);
+            pumpkins[i].transform.DOScale(scale, 1.5f);
         }
     }
 

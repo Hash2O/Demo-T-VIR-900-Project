@@ -53,7 +53,7 @@ MonoBehaviour:
   requestedRecipe: {fileID: 11400000, guid: 2e2eb58f50d7c0345b98e92635ec3bf9, type: 2}
   patienceBar: {fileID: 6254805328288799806}
   deliveryCounter: {fileID: 0}
-  ghostRenderer: {fileID: 0}
+  ghostRenderer: {fileID: 8674258971040740206}
   colorChangeSpeed: 4
   hasReceivedCorrectPotion: 0
   manager: {fileID: 0}

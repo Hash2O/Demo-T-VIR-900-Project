@@ -44,6 +44,10 @@ public class GhostCycleManager : MonoBehaviour
     [Header("Patience penalties")]
     [Tooltip("Temps retiré à la patience du fantôme en cas de mauvaise potion")]
     public float wrongPotionPenalty = 30f;
+    [Header("Références Endless Mode")]
+    public  EndlessModeManager endlessModeManager;
+    public PostProcessManager postProcessManager;
+    public bool endlessModeTimeOut = false;
 
     private bool isSpawning = false;
     private float remainingWaitTime;    // Stockage du temps restant quand le fantôme est satisfait (gestion récompense bonus)
@@ -57,6 +61,7 @@ public class GhostCycleManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(GhostCycleLoop());
+        if(endlessModeManager != null) endlessModeManager.StartCountdown();
     }
 
     public void StopCycle()
@@ -74,7 +79,7 @@ public class GhostCycleManager : MonoBehaviour
                 yield return null;
 
             // Tant qu’on est en pause, SpawnGhost n’est pas lancé.
-            if (!isSpawning && activeGhost == null)
+            if (!isSpawning && activeGhost == null && !endlessModeTimeOut)
             {
                 yield return StartCoroutine(SpawnGhost());
             }
@@ -176,7 +181,8 @@ public class GhostCycleManager : MonoBehaviour
         remainingWaitTime = maxWaitTime;
         if (activeGhost.ghostRenderer != null)
         {
-            activeGhost.ghostRenderer.material.SetFloat("_Alpha", 1.0f);
+            foreach(Material mat in activeGhost.ghostRenderer.materials)
+                mat.SetFloat("_Alpha", 1.0f);
         }
         while (remainingWaitTime > 0f)
         {
@@ -186,8 +192,8 @@ public class GhostCycleManager : MonoBehaviour
                     activeGhost.patienceBar.SetVisible(false);
                 if (activeGhost.ghostRenderer != null)
                 {
-
-                    activeGhost.ghostRenderer.material.SetFloat("_Alpha", Mathf.Lerp(activeGhost.ghostRenderer.material.GetFloat("_Alpha"), 1.0f, 0.75f));
+                    foreach(Material mat in activeGhost.ghostRenderer.materials)
+                        mat.SetFloat("_Alpha", Mathf.Lerp(activeGhost.ghostRenderer.material.GetFloat("_Alpha"), 1.0f, 0.75f));
                 }
 
                 yield break;
@@ -206,7 +212,8 @@ public class GhostCycleManager : MonoBehaviour
             if (activeGhost.ghostRenderer != null)
             {
                 float remainingPercent = remainingWaitTime / maxWaitTime;
-                activeGhost.ghostRenderer.material.SetFloat("_Alpha", remainingPercent);
+                foreach(Material mat in activeGhost.ghostRenderer.materials)
+                    mat.SetFloat("_Alpha", remainingPercent);
             }
 
             yield return null;
@@ -221,6 +228,7 @@ public class GhostCycleManager : MonoBehaviour
         if (activeGhost.patienceBar != null) activeGhost.patienceBar.SetVisible(false); // Désactivation de la barre de patience
         if (coinTrigger != null) coinTrigger.CoinRemoving();    // Si pièce dans la tirelire, le fantôme en enlève une 
         if (AudioManager.audioInstance != null) AudioManager.audioInstance.PlayNotificationSound(1);    // Fail Notification Horror
+            postProcessManager.DarkenScreen();
 
     }
 
@@ -260,6 +268,8 @@ public class GhostCycleManager : MonoBehaviour
         if (randomKey < 4)
             Instantiate(keyPrefab, keyDeliveryPoint.position, Quaternion.identity);
 
+        if (endlessModeManager != null)
+            endlessModeManager.AddBonusTime();
         Debug.Log($"{coinCount} pièce(s) récompensent la sorcière !");
     }
 }
