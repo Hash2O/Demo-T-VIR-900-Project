@@ -1,25 +1,35 @@
-using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+ï»¿using UnityEngine;
+//using UnityEngine.SceneManagement;
+//using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class DoorLockDummyKey : MonoBehaviour
 {
-    [Header("Références")]
+    [Header("RÃ©fÃ©rences")]
     [SerializeField] private HingeJoint doorHinge;
-    [SerializeField] private XRBaseInteractable doorHandle;   // XR Grab de la poignée (optionnel)
-    [SerializeField] private GameObject dummyKey;             // Clé visuelle déjà dans la serrure (désactivée au départ)
+    [SerializeField] private XRBaseInteractable doorHandle;
+    [SerializeField] private GameObject dummyKey;
 
-    [Header("Clé requise")]
-    [SerializeField] private string requiredKeyTag = "";  // Tag de la vraie clé
+    [Header("ClÃ© requise")]
+    [SerializeField] private string requiredKeyTag = "DoorKey";
+
+    [Header("Changement de scÃ¨ne")]
+    [SerializeField] private int nextSceneIndex = 1;  // Index de la scÃ¨ne suivante dans Build Settings
+    [SerializeField] private float openAngleThreshold = 45f;  // Angle pour dÃ©clencher le changement (degrÃ©s)
 
     [Header("Options")]
     [SerializeField] private bool lockHandleWhenLocked = false;
+    [SerializeField] private bool oneTimeOnly = true;  // Une seule fois par porte
+    [SerializeField] private float debounceTime = 1f;  // DÃ©lai anti-retrigger (secondes)
 
     private bool isUnlocked = false;
+    private bool sceneTriggered = false;
+    private float lastTriggerTime = 0f;
+
+    // HingeJoint config
     private JointLimits lockedLimits;
     private JointLimits unlockedLimits;
     private bool hingeConfigInitialized = false;
-
     private bool hingeInitialUseSpring;
     private JointSpring hingeInitialSpring;
 
@@ -46,6 +56,21 @@ public class DoorLockDummyKey : MonoBehaviour
         LockDoor();
     }
 
+    private void FixedUpdate()
+    {
+        // VÃ©rifie si la porte est assez ouverte pour changer de scÃ¨ne
+        if (isUnlocked && !sceneTriggered && doorHinge != null)
+        {
+            float currentAngle = Mathf.Abs(doorHinge.angle);  // angle en degrÃ©s
+
+            if (currentAngle >= openAngleThreshold &&
+                Time.time >= lastTriggerTime + debounceTime)
+            {
+                TriggerSceneChange();
+            }
+        }
+    }
+
     private void LockDoor()
     {
         isUnlocked = false;
@@ -69,7 +94,6 @@ public class DoorLockDummyKey : MonoBehaviour
         {
             doorHinge.limits = unlockedLimits;
             doorHinge.useLimits = true;
-
             doorHinge.useSpring = hingeInitialUseSpring;
             if (hingeInitialUseSpring)
                 doorHinge.spring = hingeInitialSpring;
@@ -77,8 +101,24 @@ public class DoorLockDummyKey : MonoBehaviour
 
         if (doorHandle != null)
             doorHandle.enabled = true;
+    }
 
-        if (AudioManager.audioInstance != null) AudioManager.audioInstance.PlayItemSound(0);    // Door key in door lock
+    private void TriggerSceneChange()
+    {
+        sceneTriggered = true;
+        lastTriggerTime = Time.time;
+
+        Debug.Log($"Porte ouverte Ã  {doorHinge.angle:F1}Â° â†’ Chargement scÃ¨ne {nextSceneIndex}");
+
+        // Appel via ton GameManager singleton
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.LoadSceneByIndex(nextSceneIndex);
+        }
+        else
+        {
+            Debug.LogError("GameManager.Instance non trouvÃ© !");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -86,11 +126,9 @@ public class DoorLockDummyKey : MonoBehaviour
         if (isUnlocked)
             return;
 
-        // Vérifie la bonne clé
         if (!other.CompareTag(requiredKeyTag))
             return;
 
-        // Récupère éventuellement XRGrab + Rigidbody pour la vraie clé
         var keyGO = other.attachedRigidbody != null
             ? other.attachedRigidbody.gameObject
             : other.gameObject;
@@ -98,7 +136,6 @@ public class DoorLockDummyKey : MonoBehaviour
         var grab = keyGO.GetComponent<XRGrabInteractable>();
         var rb = keyGO.GetComponent<Rigidbody>();
 
-        // On "consomme" la vraie clé
         if (grab != null)
             grab.enabled = false;
 
@@ -109,15 +146,11 @@ public class DoorLockDummyKey : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
         }
 
-        // Soit on la masque, soit on la téléporte ailleurs
         keyGO.SetActive(false);
 
-        // On affiche la fausse clé déjà bien positionnée dans la serrure
         if (dummyKey != null)
             dummyKey.SetActive(true);
 
-        // Déverrouillage de la porte
         UnlockDoor();
     }
 }
-

@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
     public float fadeInDuration = 3.0f;
 
     [Header("References")]
-    public Button loadGameButton;
+    //public Button loadGameButton;
     //public Button clearSavedDataButton;
     
     // 
@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
 
         // Init buttons if save file exist
         bool saveFileExist = System.IO.File.Exists(Application.persistentDataPath + "/SavedData.json");
-        loadGameButton.interactable = saveFileExist;
+        //loadGameButton.interactable = saveFileExist;
         //clearSavedDataButton.interactable = saveFileExist;
     }
 

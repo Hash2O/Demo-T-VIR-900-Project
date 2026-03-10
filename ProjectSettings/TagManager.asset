@@ -19,6 +19,7 @@ TagManager:
   - SimiliNavMesh
   - LibraryKey
   - GardenKey
+  - CemeteryKey
   layers:
   - Default
   - TransparentFX

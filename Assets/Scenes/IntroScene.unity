@@ -12881,7 +12881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &602994482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21172,7 +21172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1144321732
 Transform:
   m_ObjectHideFlags: 0
@@ -21927,7 +21927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1198666560
 Transform:
   m_ObjectHideFlags: 0
@@ -27958,6 +27958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   fadeOutDuration: 3
   fadeInDuration: 3
+  loadSavedData: 0
 --- !u!1001 &1677085848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30455,7 +30456,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b28cf593056b53747941a6a2f2e63c90, type: 3}
   timeMin: 1
   timeMax: 2
-  audioSource: {fileID: 1761131506}
 --- !u!1001 &1762089626
 PrefabInstance:
   m_ObjectHideFlags: 0
