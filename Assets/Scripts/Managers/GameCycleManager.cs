@@ -52,7 +52,7 @@ public class GameCycleManager : MonoBehaviour
 
         ghostCycleManager.enabled = false;
 
-        directionalLight.intensity = 1.2f;
+        directionalLight.intensity = 1.0f;
 
         bell.SetEnabled(true); // Clochette activée
 
@@ -74,7 +74,7 @@ public class GameCycleManager : MonoBehaviour
 
         ghostCycleManager.enabled = true;
 
-        directionalLight.intensity = 0.2f;
+        directionalLight.intensity = 0.3f;
 
         PumpkinCounter.Instance.SetNightObjective(ghostsRequiredThisNight);
 

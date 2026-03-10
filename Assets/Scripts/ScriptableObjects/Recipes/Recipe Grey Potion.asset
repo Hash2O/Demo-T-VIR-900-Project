@@ -22,4 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 22faea027a132a14f89302df48098bf5, type: 2}
   - {fileID: 11400000, guid: a9440f8fadc973e429e8383784a8f13b, type: 2}
   ghostPrefab: {fileID: 2315974465149695507, guid: 9971b731fe64e0144a1288057a9a32e3, type: 3}
-  isKnownAtStart: 0
+  isKnownAtStart: 1

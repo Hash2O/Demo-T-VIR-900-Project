@@ -16,6 +16,9 @@ TagManager:
   - Delivery
   - Coin
   - Key
+  - SimiliNavMesh
+  - LibraryKey
+  - GardenKey
   layers:
   - Default
   - TransparentFX
@@ -26,8 +29,8 @@ TagManager:
   - Sliceable
   - Secret
   - Ray
-  - 
-  - 
+  - Key
+  - Door
   - 
   - 
   - 

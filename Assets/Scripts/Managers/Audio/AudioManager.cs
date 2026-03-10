@@ -47,4 +47,9 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(_notificationAudioClips[index]);
     }
+
+    public void PlayItemSound(int index)
+    {
+        audioSource.PlayOneShot(_itemSoundAudioClips[index]);
+    }
 }

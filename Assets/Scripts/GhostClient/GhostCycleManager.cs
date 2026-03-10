@@ -360,7 +360,7 @@ public class GhostCycleManager : MonoBehaviour
 
     [Header("Récompenses")]
     public GameObject coinPrefab;
-    public GameObject keyPrefab;
+    //public GameObject keyPrefab;
     public Transform coinDeliveryPoint;
     public Transform keyDeliveryPoint;
     public float timeBetweenCoins = 0.5f;
@@ -559,7 +559,7 @@ public class GhostCycleManager : MonoBehaviour
             activeGhost.patienceBar.SetVisible(false);
 
         // Temps écoulé
-        Debug.Log("⏰ Temps écoulé ! Le fantôme part sans potion, vidant en partie la tirelire en partant.");
+        Debug.Log("Temps écoulé ! Le fantôme part sans potion, vidant en partie la tirelire en partant.");
 
         if (activeGhost.patienceBar != null) activeGhost.patienceBar.SetVisible(false); // Désactivation de la barre de patience
         if (coinTrigger != null) coinTrigger.CoinRemoving();    // Si pièce dans la tirelire, le fantôme en enlève une 
@@ -572,7 +572,7 @@ public class GhostCycleManager : MonoBehaviour
         remainingWaitTime -= wrongPotionPenalty;
         remainingWaitTime = Mathf.Max(remainingWaitTime, 0f);
 
-        Debug.Log($"❌ Mauvaise potion ! -{wrongPotionPenalty} secondes de patience.");
+        Debug.Log($"Mauvaise potion ! -{wrongPotionPenalty} secondes de patience.");
     }
 
     private IEnumerator GiveReward()
@@ -581,12 +581,13 @@ public class GhostCycleManager : MonoBehaviour
             yield break;
 
         int coinCount = Random.Range(1, 4); // 1 à 3 pièces de base
-        int bonusCoins = Mathf.FloorToInt(remainingWaitTime / bonusTimeToCheck);    // Bonus si livraison rapide
+
+        // A ré activer si on veut accentuer le nombre de pièces reçues en bonus
+        //int bonusCoins = Mathf.FloorToInt(remainingWaitTime / bonusTimeToCheck);    // Bonus si livraison rapide
+        //coinCount += bonusCoins;    // calcul du nombre de pièces données par le client fantôme satisfait
 
         if (AudioManager.audioInstance != null)
             AudioManager.audioInstance.PlayTheGoodSound(11);    // Fairy Cartoon Success Voice
-
-        coinCount += bonusCoins;    // calcul du nombre de pièces données par le client fantôme satisfait
 
         if (AudioManager.audioInstance != null)
             AudioManager.audioInstance.PlayTheGoodSound(0); // Cashing Sound
@@ -597,11 +598,12 @@ public class GhostCycleManager : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenCoins);
         }
 
-        int randomKey = Random.Range(1, 11);
-        Debug.Log("Random Key Number : " + randomKey);
+        // A ré activer si on veut randomiser la distribution des clés
+        //int randomKey = Random.Range(1, 11);
+        //Debug.Log("Random Key Number : " + randomKey);
 
-        if (randomKey < 4)
-            Instantiate(keyPrefab, keyDeliveryPoint.position, Quaternion.identity);
+        //if (randomKey < 4)
+        //    Instantiate(keyPrefab, keyDeliveryPoint.position, Quaternion.identity);
 
         Debug.Log($"{coinCount} pièce(s) récompensent la sorcière !");
     }
