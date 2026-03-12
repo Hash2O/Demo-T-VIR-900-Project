@@ -17,6 +17,6 @@ public class BellInteraction : MonoBehaviour
             return;
         }
 
-        GameCycleManager.Instance.StartNight();
+        GameCycleManager.GameCycleInstance.StartNight();
     }
 }

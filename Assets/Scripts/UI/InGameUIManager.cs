@@ -84,6 +84,6 @@ public class InGameUIManager : MonoBehaviour
 
     public void LeaveKitchen()
     {
-        if(GameManager.Instance != null) GameManager.Instance.QuitGame();
+        if(GameManager.GMInstance != null) GameManager.GMInstance.QuitGame();
     }
 }

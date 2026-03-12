@@ -105,7 +105,7 @@ using System.Collections.Generic;
 
 public class PumpkinCounter : MonoBehaviour
 {
-    public static PumpkinCounter Instance { get; private set; }
+    public static PumpkinCounter PumpkinInstance { get; private set; }
 
     [Header("Liste des citrouilles (feedback visuel uniquement)")]
     public List<GameObject> pumpkins = new List<GameObject>();
@@ -123,13 +123,13 @@ public class PumpkinCounter : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (PumpkinInstance != null && PumpkinInstance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        Instance = this;
+        PumpkinInstance = this;
     }
 
     #region Night Setup
@@ -188,7 +188,7 @@ public class PumpkinCounter : MonoBehaviour
             return;
 
         Debug.Log("🎃 Objectif nocturne atteint !");
-        GameCycleManager.Instance.EndNight();
+        GameCycleManager.GameCycleInstance.EndNight();
     }
 
     #endregion

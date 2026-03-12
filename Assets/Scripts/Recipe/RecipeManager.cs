@@ -62,7 +62,7 @@ using UnityEngine;
 
 public class RecipeManager : MonoBehaviour
 {
-    public static RecipeManager Instance { get; private set; }
+    public static RecipeManager RecipeInstance { get; private set; }
 
     [Header("Toutes les recettes du jeu")]
     public List<RecipeData> allRecipes = new();
@@ -79,13 +79,13 @@ public class RecipeManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (RecipeInstance != null && RecipeInstance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        Instance = this;
+        RecipeInstance = this;
         DontDestroyOnLoad(gameObject);
 
         InitializeKnownRecipes();

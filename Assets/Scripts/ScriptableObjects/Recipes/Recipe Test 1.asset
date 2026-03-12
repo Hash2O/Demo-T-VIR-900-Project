@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85eb73555c1f09041b67e613296df52e, type: 3}
-  m_Name: Recipe Test
+  m_Name: Recipe Test 1
   m_EditorClassIdentifier: Assembly-CSharp::RecipeData
   recipeName: Recette Test
   description: 
@@ -19,7 +19,7 @@ MonoBehaviour:
   bottlePrefab: {fileID: 3660984119618516505, guid: 60bca27091de3b944a0d7c9c80ff9206, type: 3}
   requiredIngredients:
   - {fileID: 11400000, guid: 7b9fba8c27a65d44182af156209de484, type: 2}
-  - {fileID: 11400000, guid: 017064dd6d929794da473224ceab5408, type: 2}
+  - {fileID: 11400000, guid: 22faea027a132a14f89302df48098bf5, type: 2}
   - {fileID: 11400000, guid: c7c0319b5add87649a57de37da8b4eda, type: 2}
   ghostPrefab: {fileID: 7492574387322186502, guid: a7c99d9058d0cdf4da3194c75de3a500, type: 3}
   isKnownAtStart: 1

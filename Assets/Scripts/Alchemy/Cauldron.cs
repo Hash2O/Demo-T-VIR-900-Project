@@ -201,7 +201,7 @@ public class Cauldron : MonoBehaviour
 
     private List<RecipeData> FindMatchingRecipes()
     {
-        return RecipeManager.Instance.allRecipes
+        return RecipeManager.RecipeInstance.allRecipes
             .Where(r => addedIngredients.All(i => r.requiredIngredients.Contains(i)))
             .ToList();
     }

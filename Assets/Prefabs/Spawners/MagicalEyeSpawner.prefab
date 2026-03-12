@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 3869686167841737446}
   - component: {fileID: 8634668365286479033}
   - component: {fileID: 1204101046700068687}
+  - component: {fileID: 5906329523331981563}
   m_Layer: 0
   m_Name: MagicalEyeSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3394975138525976148
 Transform:
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3005488291991548153}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.99402976, z: -0, w: 0.109109655}
+  m_LocalRotation: {x: 0, y: 0.9940297, z: 0, w: 0.10910982}
   m_LocalPosition: {x: -1.51, y: 0.91569, z: -1.013}
-  m_LocalScale: {x: 0.075, y: 0.01, z: 0.075}
+  m_LocalScale: {x: 0.07499999, y: 0.01, z: 0.07499999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5596005086423482295}
@@ -91,6 +92,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1204101046700068687
 BoxCollider:
@@ -113,6 +115,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5906329523331981563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3005488291991548153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b14e860349abb74f91e948586634279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientSpawner
+  ingredientID: Eye
+  availableAtStart: 1
 --- !u!1 &6428158396447991585
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,11 +142,11 @@ GameObject:
   - component: {fileID: 7468773495036088586}
   - component: {fileID: 3295828049779950762}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Eye Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &3902208933848135802
 RectTransform:
@@ -231,7 +247,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &5779087731937963348
 RectTransform:
@@ -318,6 +334,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -368,7 +385,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5596005086423482295
 Transform:

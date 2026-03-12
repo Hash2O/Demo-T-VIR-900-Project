@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &400453131459623394
 RectTransform:
@@ -103,6 +103,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -149,11 +150,11 @@ GameObject:
   - component: {fileID: 3845346667562282462}
   - component: {fileID: 3683609350052881949}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Rat Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &3716524608383637313
 RectTransform:
@@ -250,12 +251,13 @@ GameObject:
   - component: {fileID: 6129696078515493934}
   - component: {fileID: 1758300790828977614}
   - component: {fileID: 7566527495219638}
+  - component: {fileID: 4331976846526115831}
   m_Layer: 0
   m_Name: RatSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6287689746796922596
 Transform:
@@ -265,9 +267,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6285515978071268563}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.99402976, z: -0, w: 0.109109655}
+  m_LocalRotation: {x: 0, y: 0.9940297, z: 0, w: 0.10910982}
   m_LocalPosition: {x: -1.696, y: 0.91569, z: -0.181}
-  m_LocalScale: {x: 0.075, y: 0.01, z: 0.075}
+  m_LocalScale: {x: 0.07499999, y: 0.01, z: 0.07499999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7084074544389288229}
@@ -329,6 +331,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &7566527495219638
 BoxCollider:
@@ -351,6 +354,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4331976846526115831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285515978071268563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b14e860349abb74f91e948586634279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientSpawner
+  ingredientID: Rat
+  availableAtStart: 1
 --- !u!1 &6532496248519260188
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +385,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7084074544389288229
 Transform:
@@ -445,5 +462,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd232a70d871934398b5d3fbeb410d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IngredientSpawnerManager
-  ingredientPrefab: {fileID: 6923641385968580908, guid: f28abbe8556c15b4fb39f99d63b5ff29, type: 3}
+  ingredientPrefab: {fileID: 9110086534388360618, guid: c444ef120c06dec46b12559fcc97e006, type: 3}
   spawnPoint: {fileID: 7084074544389288229}

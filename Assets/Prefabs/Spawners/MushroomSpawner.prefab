@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 1068403896450178388}
   - component: {fileID: 3504036555301373716}
   - component: {fileID: 2136135202132957627}
+  - component: {fileID: 2855563005862341368}
   m_Layer: 0
   m_Name: MushroomSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7104109031646189967
 Transform:
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837315304417444064}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.99402976, z: -0, w: 0.109109655}
+  m_LocalRotation: {x: 0, y: 0.9940297, z: 0, w: 0.10910982}
   m_LocalPosition: {x: 0.001, y: 0, z: -0.006}
-  m_LocalScale: {x: 0.075, y: 0.01, z: 0.075}
+  m_LocalScale: {x: 0.07499999, y: 0.01, z: 0.07499999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4661751416968973786}
@@ -91,6 +92,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &2136135202132957627
 BoxCollider:
@@ -113,6 +115,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2855563005862341368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837315304417444064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b14e860349abb74f91e948586634279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientSpawner
+  ingredientID: Mushroom
+  availableAtStart: 0
 --- !u!1 &2230377226148171590
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +145,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &822389433735066980
 RectTransform:
@@ -216,6 +232,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -262,11 +279,11 @@ GameObject:
   - component: {fileID: 1414740493145003009}
   - component: {fileID: 5502298065266335964}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Mushroom Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &525339908338763400
 RectTransform:
@@ -368,7 +385,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4661751416968973786
 Transform:

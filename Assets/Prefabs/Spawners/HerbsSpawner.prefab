@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 4144517947654180733}
   - component: {fileID: 6499184160828474913}
   - component: {fileID: 9174297662552640749}
+  - component: {fileID: 8901271002952025622}
   m_Layer: 0
   m_Name: HerbsSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1987308482281730449
 Transform:
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861431830556516343}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.99402976, z: -0, w: 0.109109655}
+  m_LocalRotation: {x: 0, y: 0.9940297, z: 0, w: 0.10910982}
   m_LocalPosition: {x: -1.605, y: 0.91569, z: -0.589}
-  m_LocalScale: {x: 0.075, y: 0.01, z: 0.075}
+  m_LocalScale: {x: 0.07499999, y: 0.01, z: 0.07499999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3409605704819407281}
@@ -91,6 +92,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &9174297662552640749
 BoxCollider:
@@ -113,6 +115,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8901271002952025622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861431830556516343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b14e860349abb74f91e948586634279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientSpawner
+  ingredientID: Herb
+  availableAtStart: 0
 --- !u!1 &1094251166281922473
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +146,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3409605704819407281
 Transform:
@@ -225,7 +241,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &3437562402312744104
 RectTransform:
@@ -314,6 +330,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -360,11 +377,11 @@ GameObject:
   - component: {fileID: 2865323690624127561}
   - component: {fileID: 1062984380448594807}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Herb Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &8089241324576376283
 RectTransform:

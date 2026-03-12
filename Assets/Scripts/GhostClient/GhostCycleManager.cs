@@ -439,7 +439,7 @@ public class GhostCycleManager : MonoBehaviour
         isSpawning = true;
         yield return new WaitForSeconds(spawnDelay);
 
-        availableGhosts = RecipeManager.Instance.GetKnownGhostPrefabs();
+        availableGhosts = RecipeManager.RecipeInstance.GetKnownGhostPrefabs();
 
         if (availableGhosts.Count == 0)
         {

@@ -20,6 +20,11 @@ TagManager:
   - LibraryKey
   - GardenKey
   - CemeteryKey
+  - AtticKey
+  - RoomKey
+  - Herb
+  - AudioSlider
+  - Sun
   layers:
   - Default
   - TransparentFX

@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5916669585872356194
 Transform:
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd232a70d871934398b5d3fbeb410d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IngredientSpawnerManager
-  ingredientPrefab: {fileID: 7972581387295880273, guid: 36e933a629c3d3d47b56ee54c686e3ba, type: 3}
+  ingredientPrefab: {fileID: 7972581387295880273, guid: c4e575a8791a4524a9319ba04f6a0b22, type: 3}
   spawnPoint: {fileID: 5916669585872356194}
 --- !u!1 &2860046549234402396
 GameObject:
@@ -109,11 +109,11 @@ GameObject:
   - component: {fileID: 1585834011986716415}
   - component: {fileID: 8984860057872475926}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Spider Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &4475819605032826355
 RectTransform:
@@ -210,12 +210,13 @@ GameObject:
   - component: {fileID: 6736147633219857810}
   - component: {fileID: 3182348702400743587}
   - component: {fileID: 4011304036742212702}
+  - component: {fileID: 8953280045165887916}
   m_Layer: 0
   m_Name: SpiderSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &352142515448816300
 Transform:
@@ -225,9 +226,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6201899135179489914}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.99402976, z: -0, w: 0.109109655}
+  m_LocalRotation: {x: 0, y: 0.9940297, z: 0, w: 0.10910982}
   m_LocalPosition: {x: -1.571, y: 0.91569, z: -0.74}
-  m_LocalScale: {x: 0.075, y: 0.01, z: 0.075}
+  m_LocalScale: {x: 0.07499999, y: 0.01, z: 0.07499999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5916669585872356194}
@@ -289,6 +290,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &4011304036742212702
 BoxCollider:
@@ -311,6 +313,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8953280045165887916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6201899135179489914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b14e860349abb74f91e948586634279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientSpawner
+  ingredientID: Spider
+  availableAtStart: 1
 --- !u!1 &7821836654367095054
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +343,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &3707542864240704248
 RectTransform:
@@ -414,6 +430,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

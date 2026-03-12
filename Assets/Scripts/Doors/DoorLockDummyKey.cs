@@ -111,9 +111,9 @@ public class DoorLockDummyKey : MonoBehaviour
         Debug.Log($"Porte ouverte à {doorHinge.angle:F1}° → Chargement scène {nextSceneIndex}");
 
         // Appel via ton GameManager singleton
-        if (GameManager.Instance != null)
+        if (GameManager.GMInstance != null)
         {
-            GameManager.Instance.LoadSceneByIndex(nextSceneIndex);
+            GameManager.GMInstance.LoadSceneByIndex(nextSceneIndex);
         }
         else
         {

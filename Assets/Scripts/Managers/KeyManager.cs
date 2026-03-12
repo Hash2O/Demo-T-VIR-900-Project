@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeyManager : MonoBehaviour
 {
-    public static KeyManager Instance;
+    public static KeyManager KeyInstance;
 
     [System.Serializable]
     public class ManorKey
@@ -18,8 +19,16 @@ public class KeyManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (KeyInstance != null && KeyInstance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        KeyInstance = this;
+        DontDestroyOnLoad(gameObject);
     }
+
 
     public void SpawnKey(int dayIndex)
     {

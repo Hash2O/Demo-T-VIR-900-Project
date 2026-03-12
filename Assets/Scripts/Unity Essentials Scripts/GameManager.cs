@@ -61,7 +61,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManager GMInstance { get; private set; }
 
     private FadeCanvas fadeCanvas;
 
@@ -81,13 +81,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (GMInstance != null && GMInstance != this)
         {
             // Si on revient à la scène d'intro, on garde le GameManager de la scène
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
-                Destroy(Instance.gameObject); // détruire l'ancien
-                Instance = this; // et le remplacer
+                Destroy(GMInstance.gameObject); // détruire l'ancien
+                GMInstance = this; // et le remplacer
             }
             else
             {
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        Instance = this;
+        GMInstance = this;
         DontDestroyOnLoad(gameObject);
     }
 

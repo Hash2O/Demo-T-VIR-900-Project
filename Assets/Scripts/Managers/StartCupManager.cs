@@ -19,6 +19,6 @@ public class StartCupManager : MonoBehaviour
         AudioManager.audioInstance.PlayTheGoodSound(3); //Splash sound
         splashVFX.Play();
         yield return new WaitForSeconds(time);
-        GameManager.Instance.LoadNextScene();   // Load Main Scene
+        GameManager.GMInstance.LoadNextScene();   // Load Main Scene
     }
 }

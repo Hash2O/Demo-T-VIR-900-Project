@@ -18,7 +18,7 @@ public class BellManager : MonoBehaviour
             Debug.Log("Les clients fantômes sont invités à venir passer commande !");
             isBellActivated = true;
             startNotificationVFX.Play();
-            GameCycleManager.Instance.StartNight();
+            GameCycleManager.GameCycleInstance.StartNight();
             ghostManager.gameObject.SetActive(true);
         }
     }
