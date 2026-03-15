@@ -19,7 +19,7 @@ public class BellManager : MonoBehaviour
             isBellActivated = true;
             startNotificationVFX.Play();
             GameCycleManager.GameCycleInstance.StartNight();
-            ghostManager.gameObject.SetActive(true);
+            if(ghostManager != null) ghostManager.gameObject.SetActive(true);
         }
     }
 }

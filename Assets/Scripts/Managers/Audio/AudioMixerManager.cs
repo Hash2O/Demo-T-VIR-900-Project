@@ -17,7 +17,7 @@ public class AudioMixerManager : MonoBehaviour
     {
         GameObject sliderToFind = GameObject.FindWithTag("AudioSlider");
         //Debug.Log("sliderToFind : " + sliderToFind.name);
-        _bgmSlider = sliderToFind.GetComponentInChildren<Slider>();
+        if(sliderToFind != null) _bgmSlider = sliderToFind.GetComponentInChildren<Slider>();
     }
 
     void Update()

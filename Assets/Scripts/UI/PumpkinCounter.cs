@@ -130,6 +130,7 @@ public class PumpkinCounter : MonoBehaviour
         }
 
         PumpkinInstance = this;
+        //DontDestroyOnLoad(gameObject);
     }
 
     #region Night Setup

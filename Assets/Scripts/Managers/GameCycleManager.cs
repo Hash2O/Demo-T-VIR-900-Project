@@ -202,12 +202,31 @@ public class GameCycleManager : MonoBehaviour
         PumpkinCounter.PumpkinInstance.SetNightObjective(ghostsRequiredThisNight);
 
         Debug.Log($"🌙 Nuit {currentDay + 1}");
+
+        if (ghostCycleManager == null)
+        {
+            ghostCycleManager = FindFirstObjectByType<GhostCycleManager>();
+        }
+
+        if (ghostCycleManager != null)
+        {
+            ghostCycleManager.StartCycle();
+            Debug.Log("StartCycle() : " + ghostCycleManager.cycleActive);
+        }
+        else
+        {
+            Debug.LogWarning("GhostCycleManager introuvable !");
+        }
+
+        //Debug.Log("StartCycle() : " + ghostCycleManager.cycleActive);
     }
 
     public void EndNight()
     {
         if (ghostCycleManager != null)
             ghostCycleManager.StopCycle();
+
+        bellManager.isBellActivated = false;
 
         SpawnKeyForCurrentDay();
 
